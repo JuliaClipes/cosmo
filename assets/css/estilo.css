@@ -1,3 +1,8 @@
+// fazer a mesma coisa que fez com a imagem que estava antes na apresentação no footer e na section de apresentação
+//editar imagem de apresentação e pensar como deixar mais harmonico as cores e etc
+
+
+
 body{
     margin: 0;
 }
@@ -64,7 +69,7 @@ body{
 .menu li a:hover {
     opacity:1;
     padding: 14px 16px;    
-    background-image: url(../img/fundo_menu_hover.jpg);
+    background-image: url(../img/fundo_menu_hover.png);
     color:#ECDCF5
 }
 
@@ -95,12 +100,12 @@ body{
 
 .section-apresentacao {
     width:100%;
-    height: 80%;
+    height: 70%;
     align-content: center;
     padding-bottom: 30px;
     padding-top: 30px;
     display: flex; 
-    background-color: #f2eff4;
+    background-image:url(../img/opcao2e_fundo.jpg) ;
 
 }
 
@@ -113,12 +118,18 @@ body{
 }
 
 
-.img-yoga {
-    width: 50%;
+.img-yoga-geral {
+    width: 550px;
+    height: 500px;
     float: left;
     display:flex;
     align-content: center;
 
+}
+
+.img-yoga{
+    width: 100%;
+    height: 100%
 }
 .conteudo-a{
     width:100%;
@@ -183,7 +194,7 @@ input {
     display: flex;
     float: right;
     margin-right: 30px;
-    margin-top: 3.5px;
+    margin-top: 5px;
 }
 input[type=search] {
     -webkit-appearance: textfield;
