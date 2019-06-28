@@ -1,10 +1,8 @@
-// fazer a mesma coisa que fez com a imagem que estava antes na apresentação no footer e na section de apresentação
-//editar imagem de apresentação e pensar como deixar mais harmonico as cores e etc
-
 
 
 body{
     margin: 0;
+    overflow-x: hidden;
 }
 
 .section_head{
@@ -12,39 +10,34 @@ body{
     height: 50%;
 }
 
-.image{
-    background-image: url('../img/galaxia.jpg');
+/*.image{
+    background-color: #77519e;
     width: 100%;
-    height: 100%;
-}
+    height: 50px; 
+}*/
 
 .gradiente {
-    background-image: radial-gradient(rgba(0,0,0,0.6), rgba(255,255,255, 0.1)); 
+    background-image: linear-gradient(to bottom, black, transparent); 
     width: 100%;
-    height: 50%;
+    height: 10%;
     position: absolute;
-    top: 0;
+    padding-top: 0;
+    top:0;
 }
-#logo{
+.logo{
     position: absolute;
-    top: 0px;
-    width: 90%;
-    height: 45%;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center
-
+    top:10px;
+    z-index: 9;
 }
 
 
 .menu{
-    margin: 0;
+    margin-left: 80px;
     overflow: hidden;
-    background: url(../img/fundo_menu.jpg) repeat;
     width:100%;
-    padding: 0;
+    padding-top: 0;
 }
+
 
 .menu li {
     padding-left: 20px;
@@ -53,24 +46,23 @@ body{
     font-family: verdana; 
     display: flex;
 
-
 }
+
 
 .menu li a {
     font-size: 18px;
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 5px 7px;
     text-decoration: none;
     opacity:0.5;
 }
 
 .menu li a:hover {
     opacity:1;
-    padding: 14px 16px;    
-    background-image: url(../img/fundo_menu_hover.png);
-    color:#ECDCF5
+    color:#866ffc
+
 }
 
 .menu li  ul{
@@ -98,16 +90,17 @@ body{
 }
 
 
-.section-apresentacao {
+.section-imagem-topo {
     width:100%;
-    height: 70%;
+    height: 80%;
     align-content: center;
     padding-bottom: 30px;
     padding-top: 30px;
     display: flex; 
     background-image:url(../img/opcao2e_fundo.jpg) ;
-
 }
+
+
 
 .h1-a {
     font-size: 26px;
@@ -183,7 +176,7 @@ body{
 h1{
     text-align: center;
     font-family: verdana;
-    color: #a05cb8;
+    color: #866ffc;
     font-size:23px;
 }
 
@@ -193,7 +186,7 @@ input {
     outline: none;
     display: flex;
     float: right;
-    margin-right: 30px;
+    margin-right: 140px;
     margin-top: 5px;
 }
 input[type=search] {
@@ -295,7 +288,7 @@ hr {
 }
 
 .conteudo-img-config-footer {
-   
+
 
 }
 
@@ -304,7 +297,7 @@ hr {
     padding-bottom: 3px;
     height: 55px;
     font-size: 12px;
-    background-color: #77519e;
+    background-color: #866ffc;
     text-align: center;
     color:white;
 }
