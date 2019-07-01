@@ -75,10 +75,20 @@ body{
 
 
 .menu li ul li{
-    border:1px solid #c0c0c0; 
+    border:0px;
     display:block; 
     width:150px;
 }
+
+.menu li:hover ul, .menu li.over ul{
+    display:block;}
+
+.ul-especial {
+    background-image: linear-gradient(to bottom, black, transparent); 
+    overflow: hidden;
+    width:100%;
+}
+
 
 .section{
     width:100%;
@@ -92,7 +102,7 @@ body{
 
 .section-imagem-topo {
     width:100%;
-    height: 80%;
+    height: 85%;
     align-content: center;
     padding-bottom: 30px;
     padding-top: 30px;
@@ -100,7 +110,28 @@ body{
     background-image:url(../img/opcao2e_fundo.jpg) ;
 }
 
+.section-icones{
+    width:100%;
+    height: auto;
+    align-content: center;
+    padding-bottom: 50px;
+    padding-top: 20px;
+    display: flex;
+}
 
+.div-icones {
+ 
+    display: flex;
+}
+
+.icone{
+    font-size:150px;
+    margin-top: 80px;
+    margin-bottom:50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    color: #4d39b8
+}
 
 .h1-a {
     font-size: 26px;
