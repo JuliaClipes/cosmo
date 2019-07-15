@@ -31,7 +31,7 @@ body{
 }
 
 
-.menu{
+.ul-menu{
     margin-left: 80px;
     overflow: hidden;
     width:100%;
@@ -39,7 +39,7 @@ body{
 }
 
 
-.menu li {
+.li-menu{
     padding-left: 20px;
     float: left;
     position: relative;
@@ -49,7 +49,7 @@ body{
 }
 
 
-.menu li a {
+.a-menu {
     font-size: 18px;
     display: block;
     color: white;
@@ -59,35 +59,27 @@ body{
     opacity:0.5;
 }
 
-.menu li a:hover {
+.a-menu:hover {
     opacity:1;
     color:#866ffc
+}  
 
-}
+.menu-li:hover menu-ul, .li-especial.over ul-especial{
+    display:block;}
 
-.menu li  ul{
+.ul-especial {
     position:absolute; 
     top:25px; 
     left:0;
     background-color:#fff; 
     display:none;
-}   
-
-
-.menu li ul li{
-    border:0px;
-    display:block; 
-    width:150px;
 }
 
-.menu li:hover ul, .menu li.over ul{
-    display:block;}
-
-.ul-especial {
-    background-image: linear-gradient(to bottom, black, transparent); 
-    overflow: hidden;
-    width:100%;
+.li-especial{
+ 
 }
+
+.a-especial {}
 
 
 .section{
@@ -210,8 +202,7 @@ h1{
     color: #866ffc;
     font-size:23px;
 }
-
-
+ 
 
 input {
     outline: none;
@@ -328,7 +319,7 @@ hr {
     padding-bottom: 3px;
     height: 55px;
     font-size: 12px;
-    background-color: #866ffc;
+    background-color: #4d39b8;
     text-align: center;
     color:white;
 }
