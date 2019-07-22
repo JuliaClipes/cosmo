@@ -29,13 +29,11 @@ body{
     top:10px;
     z-index: 9;
 }
-
-
-.ul-menu{
-    margin-left: 80px;
+.menu {
+       margin-left: 80px;
     overflow: hidden;
     width:100%;
-    padding-top: 0;
+    padding-top: 0; 
 }
 
 
@@ -67,16 +65,24 @@ body{
 .menu-li:hover menu-ul, .li-especial.over ul-especial{
     display:block;}
 
-.ul-especial {
-    position:absolute; 
+
+.active:hover ul-especial {
+    display: flex;
+}
+
+.active ul-especial { 
     top:25px; 
     left:0;
     background-color:#fff; 
     display:none;
+    position: absolute;
+    flex-direction: column;
+    width: auto;
+    padding: 0;
 }
 
 .li-especial{
- 
+
 }
 
 .a-especial {}
@@ -100,29 +106,6 @@ body{
     padding-top: 30px;
     display: flex; 
     background-image:url(../img/opcao2e_fundo.jpg) ;
-}
-
-.section-icones{
-    width:100%;
-    height: auto;
-    align-content: center;
-    padding-bottom: 50px;
-    padding-top: 20px;
-    display: flex;
-}
-
-.div-icones {
- 
-    display: flex;
-}
-
-.icone{
-    font-size:150px;
-    margin-top: 80px;
-    margin-bottom:50px;
-    margin-left: 100px;
-    margin-right: 100px;
-    color: #4d39b8
 }
 
 .h1-a {
@@ -171,22 +154,6 @@ body{
 
 }
 
-.conteudo-img-config {
-    width: 50%;
-    float: left;
-    display:flex;
-
-}
-
-.conteudo-text-config {
-    width: 50%;
-    float: right;
-    display: flex;
-    justify-content: center;
-    margin-top: 0;
-
-
-}
 .texto {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -202,7 +169,7 @@ h1{
     color: #866ffc;
     font-size:23px;
 }
- 
+
 
 input {
     outline: none;
@@ -285,10 +252,54 @@ hr {
     border-width: 1px;
     border-color: rgba(90, 42, 107, 0.1)
 }
+.section-icones{
+    width:100%;
+    height: auto;
+    align-content: center;
+    padding-bottom: 50px;
+    padding-top: 20px;
+    display: flex;
+}
+
+.div-icones {
+
+    display: flex;
+}
+
+.icone{
+    font-size:150px;
+    margin-top: 80px;
+    margin-bottom:50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    color: #4d39b8
+}
+.section-materias-recentes{
+    width:100%;
+    height: auto;
+    align-content: center;
+    padding-bottom: 50px;
+    padding-top: 20px;
+    display: flex;
+}
+
+.div-materias {
+
+    display: flex;
+}
+
+.materia{
+    font-size:150px;
+    margin-top: 80px;
+    margin-bottom:50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    color: #4d39b8
+}
 
 .footer{
     width:100%;
-    height: 60%;
+    height: 40%;
     align-content: center;
     padding-bottom: 20px;
     padding-top: 20px;
@@ -310,7 +321,10 @@ hr {
 }
 
 .conteudo-img-config-footer {
-
+    width: 10%;
+    margin-right: 40%;
+    float: right;
+    display:flex;
 
 }
 
