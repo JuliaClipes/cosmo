@@ -1,0 +1,47 @@
+body{
+    margin:0;
+}
+.faixa {
+    height: 50px;
+    font-size: 12px;
+    background-color: #4d39b8;
+    text-align: center;
+    color:white;
+}
+
+.logo{
+    position: absolute;
+ 
+}
+
+.vertical-menu {
+  width: 300px;
+  font-family: verdana;
+   height:90%;
+   background-color: #eee;
+}
+ul{
+  margin:0;
+  padding: 0;
+}
+
+
+.vertical-menu li {
+  color: #4d39b8;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.vertical-menu li:hover {
+  background-color: #ccc;
+}
+
+.vertical-menu li.active {
+  background-color: #4d39b8;
+  color: white;
+}
+.icone{
+   
+    color: white
+}
