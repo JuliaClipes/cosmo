@@ -12,24 +12,52 @@
 
             <div class="menu">
                 <ul  class="nav">
-                    <li class="li-menu"><a href="#" class="a-menu">Inicio</a></li>
-                    <li  class="li-menu"><a href="#" class="a-menu">Matérias</a>
+                    <li class="li-menu"><a href="index.html" class="a-menu">Inicio</a></li>
+                    <li  class="li-menu"><a href="materias.html" class="a-menu">Matérias</a>
                         <ul class="ul-especial">
                             <li class="li-especial"><a href="#" class="a"> A </a></li>
                         </ul>
                     </li>
                     <li  class="li-menu"><a href="#" class="a-menu">Artesanato</a></li>
-                    <li  class="li-menu"><a href="assets/extra/login.html" class="a-menu">Registrar-se/Entrar</a></li>
+                    <li  class="li-menu"><a class="a-menu" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Registrar-se/Entrar</a></li>
                     <li  class="li-menu"><a href="#" class="a-menu">Contato</a></li>
                     <form id="demo-2">
                         <input type="search" placeholder="Search">
                     </form>
                 </ul>
             </div>
-
         </nav>
-
+		
     </section>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<div id="id01" class="modal">
+  
+  <form class="modal-content animate">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="assets/img/logo.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="conteudo-login">
+      <label for="uname">Email</label>
+      <input class="input-email" type="text" placeholder="Insira seu E-mail" name="uname" required>
+
+      <label for="psw">Senha</label>
+      <input class="input-senha"type="password" placeholder="Insira sua senha" name="psw" required>
+        
+      <button type="submit" class="button-login">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="conteudo-login">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn button-login">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
 
 
 
@@ -37,8 +65,8 @@
 <body>
     <section class="section-icones">
         <div class="conteudo">
-            <div class="icones">
-                <a href="materias.html"> <i class="far fas fa-newspaper icone"/></i> </a>
+            <div class="div-icones">
+                <a href="materias.html"> <i class="far fas fa-newspaper icone"/></i></a>
                 <i class="far fas fa-hand-holding-heart icone"></i> 
                 <i class="far fas fa-user icone"></i>
             </div>
@@ -53,20 +81,26 @@
             <div class="row">
                  <div class="materia-item">
                     <h3> Título </h3>
-                    <p class="p-t"> texto ilustrativo texto ilustrativo texto ilustrativo texto ilustrativo texto ilustrativo </p> 
+					<img src="assets/img/materia-ilustra.png">
+                    <p class="p-t"> texto ilustrativo texto ilustrativo texto ilustrativo texto ilustrativo texto ilustrativo... <a class="c-continuar-lendo" href="materia.html"> Continuar lendo </a> </p> 
                     
                 </div>
                 <div class="materia-item">
                     <h3> Titulo</h3>
-                    <p class="p-t"> texto ilustrativo texto ilustrativo texto ilustrativo texto ilustrativo texto ilustrativo </p>
+					<img src="assets/img/materia-ilustra.png">
+                    <p class="p-t"> texto ilustrativo texto ilustrativo texto ilustrativo texto ilustrativo texto ilustrativo... <a class="c-continuar-lendo" href="materia.html"> Continuar lendo </a> </p>
                 </div>
                 <div class="materia-item">
                     <h3> Titulo</h3>
-                    <p class="p-t"> texto ilustrativo texto ilustrativo texto ilustrativo texto ilustrativo texto ilustrativo </p>
+					<img src="assets/img/materia-ilustra.png">
+                    <p class="p-t"> texto ilustrativo texto ilustrativo texto ilustrativo texto ilustrativo texto ilustrativo... <a class="c-continuar-lendo" href="materia.html"> Continuar lendo </a></p>
                 </div>
             </div>
         </div>
-
+<div>
+	
+<button onclick="topFunction()" id="botao-topo">Topo</button>
+	</div>
     </section>
     <hr>
     <footer class="footer"> 
@@ -90,5 +124,7 @@
 
 
 </body>
+<script type="text/javascript" src="assets/js/estilo.js"></script>
+
 
 </html>
