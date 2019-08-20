@@ -370,7 +370,7 @@ hr {
 }
 
 .pagination a:hover:not(.active) {
-  background-color: ddd;
+  background-color: #ddd;
   border-radius: 5px;
 }
 
@@ -401,9 +401,10 @@ hr {
     align-content: center;
     padding-bottom: 20px;
     padding-top: 20px;
-
-
+   margin-left: 10%;
 }
+
+
 
 .contato-footer{
     color:#452e5b;
