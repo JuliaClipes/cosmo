@@ -1,0 +1,62 @@
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="assets/css/estilo-admin.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+
+
+    <div class="faixa"> 
+        <img src="assets/img/logop2.png">
+    </div>
+    <div class="esquerda">
+        <nav class="vertical-menu">
+            <ul>
+                <li href="index-admin.html" class="active">Olá, Admin </li> 
+                <li> <a class= "item-menu" href="materias-admin.html">Matérias </a></li>
+                <li> <a class= "item-menu"href="artesanatos-admin.html">Artesanatos</a></li>
+                <li href="#">Administradores</li>
+            </ul>
+        </nav>
+    </div>
+</head>
+<body>
+    <div class="direita">
+        <section class="form">
+            <form action="" method="POST" enctype="multipart/form-data" class="tableAdmin">
+                <div class="tableHeader row">
+                    <h2 class="title">Product Detail</h2>
+                    <div class="btnArea">
+                        <button href="" class="btnCancelar bg-1 text-fff">Cancelar</button>
+                        <button class="btnSalvar bg-1 text-fff">Salvar</button>
+                    </div>
+                </div>
+                <div class="tableBody v02">
+                    <p class="successArea">Success</p>
+                    <ul class="errorArea">
+                        <li>ERROR 01</li>
+                        <li>ERROR 02</li>
+                    </ul>
+                    <div class="formGroup row">
+                        <p class="label">Título:</p>
+                        <input type="text" name="name" class="input">
+                    </div>
+                    <div class="formGroup row">
+                        <p class="label">Texto:</p>
+                        <textarea name="description"></textarea>
+                    </div>
+           
+                    <div class="formGroup row">
+                        <p class="label">Imagem:</p>
+                        <input type="file" name="img" class="input" onChange="getImg(this)">
+                    </div>
+                    
+                </div>
+            </form>
+        </section>
+    </div>
+</body>
+</html>
