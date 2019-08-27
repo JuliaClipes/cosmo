@@ -54,21 +54,33 @@ body{
     margin-left:60px;
     text-decoration: none;
 }
+.span_um:hover{
+    color: white;
+}
 .span{
     position: absolute;
     top: 0px;
     left: 10px;
+}
+.span:hover{
+   color: white; 
 }
 .span__dois{
     position: absolute;
     top: 0px;
     left: 115px;
 }
+.span__dois:hover{
+    color: white;
+}
 .span__tres{
     position: absolute;
     top: 0px;
     left: 240px;
     margin-right:0px;
+}
+.span_tres:hover {
+    color:white;
 }
 .section{
     width:100%;
@@ -164,6 +176,30 @@ h1{
     font-family: verdana;
     color: #866ffc;
     font-size:23px;
+}
+.h1-perfil{
+    padding-top:0px;
+    text-align: center;
+    font-family: verdana;
+    color: #866ffc;
+    font-size:23px;
+}
+.h1-user{
+    padding-top:40px;
+    text-align: center;
+    font-family: verdana;
+    color: #866ffc;
+    font-size:20px;
+    margin-left:15px;
+}
+.h1-user-tabela{
+    padding-top:0px;
+    margin-top:0px;
+    text-align: center;
+    font-family: verdana;
+    color: #866ffc;
+    font-size:20px;
+    margin-left: -270px;
 }
 h3{
     font-family: verdana;
@@ -322,7 +358,7 @@ hr {
 }
 
 .c-continuar-lendo{
-    text-align: right
+   
 }
 .c-continuar-lendo:link{
     font-family: verdana;
@@ -552,3 +588,75 @@ span.psw {
         width: 100%;
     }
 }
+
+.esquerda{
+    margin-top:-40px;
+    float:left;
+    width:18%
+}
+
+.direita{
+    float:right;
+    width:80%;
+    margin-top:20px;
+    margin-right: -120px;
+
+}
+
+.img-user-perfil{
+    width: 60%;
+    margin-left: 50px;
+    margin-bottom:10px;
+}
+.box-perfil-user {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin: 0;
+  
+}
+
+.p-user{
+    color: #452e5b;
+
+}
+.button-edit-user{
+color: green;
+}
+.button-edit-user:hover{
+    color: blue;
+}
+.button-sair-user{
+color: red;
+}
+.button-sair-user:hover{
+    color: black;
+}
+
+#customers {
+  font-family: Verdana;
+  border-collapse: collapse;
+  width: 75%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #866ffc;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #866ffc;;
+  color: white;
+}
+
+.icone-perfil{
+    font-size:25px;
+    padding:10px;
+    color: #4d39b8}
