@@ -50,10 +50,12 @@ ul{
 .a-menu{
     text-decoration: none;
 }
-.icone{
-
+.icone-index-admin{
+    font-size:18px;
     color: white;
+    margin-right: 10px;
 }
+
 .esquerda{
     float:left;
     width:15%
@@ -376,7 +378,8 @@ ul {
 .editar-excluir {
     
 }
-.icone-perfil{
-    font-size:25px;
+.icone-admin{
+    font-size:20px;
     padding:10px;
-    color: #4d39b8}
+    color: #4d39b8;
+}

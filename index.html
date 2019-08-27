@@ -56,6 +56,31 @@
             </div>
         </form>
     </div>
+    
+    <div id="id02" class="modal">
+
+        <form class="modal-content animate">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id02').style.display = 'none'" class="close" title="Close Modal">&times;</span>
+                <img src="assets/img/logo.png" alt="Avatar" class="avatar">
+            </div>
+
+            <div class="conteudo-login">
+                <label for="uname">Email</label>
+                <input class="input-email" type="text" placeholder="Insira seu E-mail" name="uname" required>
+
+                <a href="perfil-usuario.html"> <button type="submit" class="button-login">Login</button> </a>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+            </div>
+
+            <div class="conteudo-login">
+                <button type="button" onclick="document.getElementById('id02').style.display = 'none'" class="cancelbtn button-login">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+        </form>
+    </div>
 
     <a onScroll="document.getElementById('id02').style.display = 'block'" style="width:auto;"> </a>
 
