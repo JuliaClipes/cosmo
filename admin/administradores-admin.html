@@ -1,7 +1,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Cosmo Admin - Materias</title>
+        <title>Cosmo Admin - Administradores</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="assets/css/estilo-admin.css">
         <link rel="stylesheet" type="text/css" href="assets/css/all.min.css">
@@ -16,7 +16,7 @@
             <ul>
                 <a href="index-admin.html" class="a-menu"> <li class="active">  <i class="far fas fa-user icone-index-admin"/></i>Olá, Admin </li>  </a>
                 <li> <a class= "item-menu" href="materias-admin.html"> <i class="far fas fa-newspaper icone-index-admin-ma"/></i>Matérias </a></li>
-                <li> <a class= "item-menu" href="artesanatos-admin.html"> <i class="far fas fa-hand-holding-heart icone-index-admin-ma"></i>Artesanatos</a></li>
+                <li> <a class= "item-menu " href="artesanatos-admin.html"> <i class="far fas fa-hand-holding-heart icone-index-admin-ma"></i>Artesanatos</a></li>
                 <li> <a class= "item-menu" href="administradores-admin.html"> <i class="far fas fa-users icone-index-admin-ma"></i>Administradores</a></li>
             </ul>
         </nav>
@@ -27,38 +27,33 @@
         <section class="form">
             <form action="" method="GET" class="tableAdmin ">
                 <div class="tableHeader row">
-                    <h2 class="title">Lista de Matérias</h2>
+                    <h2 class="title">Lista de Administradores</h2>
                     <div class="btnArea">
                         <button class="btnSalvar bg-1 text-fff">Salvar</button>
-                        <button class="btnAdicionar bg-1 text-fff"><a href="materias-edit.html" class="a-button">Nova Matéria</a></button> 
+                        <button class="btnAdicionar bg-1 text-fff"><a href="administrador-edit.html" class="a-button">Novo Administrador</a></button> 
                     </div>
                 </div>
                 <div class="tableBody">
                     <div class="row bg-1">
                         <div class="cell2 cell-50 text-center text-fff">ID</div>
-                        <div class="cell2 cell-100 text-center text-fff">Imagem</div>
-                        <div class="cell2 cell-100 text-center text-fff">Título</div> 
-                        <div class="cell2 cell-100p text-center text-fff">Texto</div>
+                        <div class="cell2 cell-100 text-center text-fff">Nome</div> 
+                        <div class="cell2 cell-100p text-center text-fff">E-mail</div>
 
 
-                        <div class="cell2 cell-100 text-center text-fff">Ações</div>
+                        <div class="cell2 cell-100 text-center text-fff">Ação</div>
                     </div>
                     <!--   BEGIN LOOP -->
                     <ul class="list lv01">
                         <li class="row">
                             <div class="cell cell-50 text-center">1</div>
-                            <div class="cell cell-100 text-center">
-                                <a href=""><img src="assets/img/materia-ilustra.png" alt="" class="cell-100p"></a>
-                            </div>
-                            <div class="cell cell-100">Matéria 1</div>
+                            <div class="cell cell-100">Admin 1</div>
                             <div class="cell cell-100 text-center">
                             </div>
-                            <div class="cell cell-100p">texto texto texto texto texto texto</div>
+                            <div class="cell cell-100p">adminum@cosmo.com</div>
                             <div class="cell cell-100">
                             </div>
 
                             <div class="cell cell-100 text-center">
-                                <a href="artesanatos-edit.html" class="text editar-botao"> <i class="far fas fa-edit icone-acoes-admin"/></i></a>
                                 <a href=""  onclick='return confirm("Tem certeza que quer remover este item?")'> <i class="far fas fa-trash icone-acoes-admin"/></i></a>
                             </div>
 

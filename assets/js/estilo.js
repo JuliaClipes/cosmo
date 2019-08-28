@@ -1,33 +1,27 @@
-window.onscroll = function () {
-    scrollFunction();
-};
+function topFunction(){
+$(document).ready(function () {
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $('#botao-topo').fadeIn();
+        } else {
+            $('#botao-topo').fadeOut();
+        }
+    });
 
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("botao-topo").style.display = "block";
-    } else {
-        document.getElementById("botao-topo").style.display = "none";
-    }
-}
-function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+    $('#botao-topo').click(function () {
+        $('html, body').animate({scrollTop: 0}, 500);
+        return false;
+    });
+});
 }
 
-window.addEventListener('scroll', function(e) {
-    //var t = 200;
-    //if(window.scroll(0, 200)){
-    //    console.log("gzuis");
-    //    document.getElementById('id02').style.display = 'block';
-    //}
-    console.log(document.body.scrollTop);
+window.addEventListener('scroll', function (e) {
     if (document.body.scrollTop == 200) {
-        console.log("asdas");
         document.getElementById('id02').style.display = 'block';
     } else {
-       document.getElementById('id02').style.display = 'none';
+        document.getElementById('id02').style.display = 'none';
     }
-  
+
 });
 
 

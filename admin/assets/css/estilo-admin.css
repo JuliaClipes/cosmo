@@ -18,7 +18,7 @@ body{
 .vertical-menu {
     width: 300px;
     font-family: verdana;
-    height:90%;
+    height:100%;
     background-color: #eee;
 }
 ul{
@@ -50,6 +50,11 @@ ul{
 .a-menu{
     text-decoration: none;
 }
+
+.active-ma{
+    background-color: yellow;
+    color: white;
+}
 .icone-index-admin{
     font-size:18px;
     color: white;
@@ -65,6 +70,13 @@ ul{
     float:right;
     width:85%;
     margin-top:-80px;
+}
+.direita-index{
+    float:right;
+    width:80%;
+    margin-top:0px;
+    margin-right: -100px;
+
 }
 
 .form{
@@ -376,10 +388,104 @@ ul {
 }
 
 .editar-excluir {
-    
+
 }
-.icone-admin{
+.icone-acoes-admin{
     font-size:20px;
     padding:10px;
     color: #4d39b8;
+}
+.icone-index-admin-ma{
+    font-size:20px;
+    color:  #4d39b8;
+    margin-right: 10px;
+}
+.grafico-todo{
+    height:300px;
+}
+.container {
+    width: 80%;
+    background-color: #ddd;
+}
+
+.grafico {
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    font-family: verdana;
+    color: #452e5b;
+}
+
+.p-grafico{
+    font-family: verdana;
+    color: #452e5b;
+}
+.h1-grafico {
+    font-size: 20px;
+    font-family: verdana;
+    color:#452e5b;
+    text-align: center;
+    margin-right: 20%;
+}
+
+.primeiro {
+    width: 90%; 
+    background-color: #e5b5ff;
+}
+.segundo {
+    width: 80%; 
+    background-color: #87c7fa;
+}
+.terceiro {
+    width: 65%;
+    background-color: #a4acfc;
+}
+.quarto {
+    width: 60%;
+    background-color: #c2c2c2;
+}
+
+
+hr {
+    max-width: 400px;
+    margin-top: 20px;
+    margin-bottom:20px;
+    margin-right: 40%;
+    border-width: 1px;
+    border-color: rgba(90, 42, 107, 0.1)
+}
+
+.icone-index-admin-info{
+    font-size:100px;
+    color: #4d39b8;
+}
+
+.infos{
+    padding:50px;
+    padding-top:10px;
+}
+
+.div-icone-index-info-dois{
+    margin-top:50px;
+}
+
+.table-info{
+    font-family: verdana;
+    color:#452e5b;
+}
+
+.tr-info{
+    font-weight: bold;
+}
+.td-info{
+    padding-left: 200px;
+    padding-right: 50px;
+}
+.td-icone{
+    margin:0px;
+    padding:0;
+}
+.td2-info{
+    margin-right:20px;
 }
