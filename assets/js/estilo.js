@@ -9,6 +9,7 @@ $(document).ready(function () {
     });
 
     $('#botao-topo').click(function () {
+        
         $('html, body').animate({scrollTop: 0}, 500);
         return false;
     });
@@ -16,9 +17,12 @@ $(document).ready(function () {
 }
 
 window.addEventListener('scroll', function (e) {
-    if (document.body.scrollTop == 200) {
+    console.log("achou");
+    console.log(document.body.scrollTop);
+    if (document.body.scrollTop == 202) {
         document.getElementById('id02').style.display = 'block';
     } else {
+        console.log("saiu scroll");
         document.getElementById('id02').style.display = 'none';
     }
 
