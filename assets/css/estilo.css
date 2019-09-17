@@ -63,7 +63,7 @@ body{
     left: 10px;
 }
 .span:hover{
-   color: white; 
+    color: white; 
 }
 .span__dois{
     position: absolute;
@@ -313,6 +313,14 @@ hr {
 .icone{
     font-size:150px;
     padding:100px;
+    padding-bottom:0px;
+    color: #4d39b8
+}
+.t-icone{
+    font-size:20px;
+    padding-top:0px;
+    padding-right:115px;
+    padding-left: 135px;
 
     color: #4d39b8
 }
@@ -358,7 +366,7 @@ hr {
 }
 
 .c-continuar-lendo{
-   
+
 }
 .c-continuar-lendo:link{
     font-family: verdana;
@@ -413,7 +421,9 @@ hr {
     cursor: pointer;
     padding: 15px;
     border-radius: 4px;
-    text-align: right;
+    margin-right:50px;
+    float: right;
+
 }
 #botao-topo:hover {
     background-color: #452e5b;
@@ -431,23 +441,27 @@ hr {
 }
 
 
-
-.contato-footer{
-    color:#452e5b;
-    height: 50%;
-    float: left;
-    display:flex;
-
+.div-esquerda-contato{
+    padding-left:5%;
+    width: 40%;
+    height: 200px;
+    margin:0;
+    float:left;
+    display: flex;
 }
 
-.conteudo-img-config-footer {
-    width: 10%;
-    margin-right: 40%;
-    float: right;
-    display:flex;
-
+.div-direita-contato{
+    float:right;
+    width:45%;
+    text-align: center;
+    margin-right: 100px;
+    justify-content: center;
 }
-
+.mapa-contato {
+    width: 300px;
+    height: 300px;
+    float:left;
+}
 .assinatura {
     padding-top: 15px;
     padding-bottom: 3px;
@@ -592,7 +606,7 @@ span.psw {
 .esquerda{
     margin-top:-40px;
     float:left;
-    width:18%
+    width:18%;
 }
 
 .direita{
@@ -609,11 +623,11 @@ span.psw {
     margin-bottom:10px;
 }
 .box-perfil-user {
-  width: 90%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  margin: 0;
-  
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin: 0;
+
 }
 
 .p-user{
@@ -621,27 +635,27 @@ span.psw {
 
 }
 .button-edit-user{
-color: green;
+    color: green;
 }
 .button-edit-user:hover{
     color: blue;
 }
 .button-sair-user{
-color: red;
+    color: red;
 }
 .button-sair-user:hover{
     color: black;
 }
 
 #customers {
-  font-family: Verdana;
-  border-collapse: collapse;
-  width: 75%;
+    font-family: Verdana;
+    border-collapse: collapse;
+    width: 75%;
 }
 
 #customers td, #customers th {
-  border: 1px solid #866ffc;
-  padding: 8px;
+    border: 1px solid #866ffc;
+    padding: 8px;
 }
 
 #customers tr:nth-child(even){background-color: #f2f2f2;}
@@ -649,11 +663,11 @@ color: red;
 #customers tr:hover {background-color: #ddd;}
 
 #customers th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #866ffc;;
-  color: white;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #866ffc;;
+    color: white;
 }
 
 .icone-perfil{
@@ -663,7 +677,7 @@ color: red;
 }
 .icone-editar-user{
     font-size:20px;
-   margin-left: 5px;
+    margin-left: 5px;
 }
 
 .botao-favoritar {
@@ -680,4 +694,9 @@ color: red;
 }
 .botao-favoritar:hover {
     background-color: #452e5b;
+}
+
+.p-modal{
+    font-family: verdana;
+    font-size:20px;
 }

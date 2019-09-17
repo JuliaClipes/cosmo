@@ -496,3 +496,45 @@ hr {
 .td2-info{
     margin-right:20px;
 }
+
+.h1-user{
+    padding-top:40px;
+    text-align: center;
+    font-family: verdana;
+    color: #866ffc;
+    font-size:20px;
+    margin-left:15px;
+}
+
+.img-user-perfil{
+    width: 60%;
+    margin-left: 50px;
+    margin-bottom:10px;
+}
+.p-user{
+    color: #452e5b;
+    font-family: verdana;
+}
+.icone-editar-user{
+    font-size:20px;
+    margin-left: 5px;
+}
+.button-edit-user{
+    color: green;
+    font-family: verdana;
+}
+.button-edit-user:hover{
+    color: blue;
+}
+.button-sair-user{
+    color: red;
+}
+.button-sair-user:hover{
+    color: black;
+}
+
+.icone-perfil-admin{
+    font-size:150px;
+    color: #c1c1c1;
+    margin-right: 10px;
+}

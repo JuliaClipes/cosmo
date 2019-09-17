@@ -17,12 +17,9 @@ $(document).ready(function () {
 }
 
 window.addEventListener('scroll', function (e) {
-    console.log("achou");
-    console.log(document.body.scrollTop);
-    if (document.body.scrollTop == 202) {
+    if (document.body.scrollTop <20) {
         document.getElementById('id02').style.display = 'block';
     } else {
-        console.log("saiu scroll");
         document.getElementById('id02').style.display = 'none';
     }
 
