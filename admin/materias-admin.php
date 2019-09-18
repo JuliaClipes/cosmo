@@ -1,29 +1,5 @@
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Cosmo Admin - Materias</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="assets/css/estilo-admin.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/all.min.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
-
-
-    <div class="faixa"> 
-        <img src="assets/img/logop2.png">
-    </div>
-    <div class="esquerda">
-        <nav class="vertical-menu">
-            <ul>
-                <a href="index-admin.html" class="a-menu"> <li class="active">  <i class="far fas fa-user icone-index-admin"/></i>Olá, Admin </li>  </a>
-                <li> <a class= "item-menu" href="materias-admin.html"> <i class="far fas fa-newspaper icone-index-admin-ma"/></i>Matérias </a></li>
-                <li> <a class= "item-menu" href="artesanatos-admin.html"> <i class="far fas fa-hand-holding-heart icone-index-admin-ma"></i>Artesanatos</a></li>
-                <li> <a class= "item-menu" href="administradores-admin.html"> <i class="far fas fa-users icone-index-admin-ma"></i>Administradores</a></li>
-                <li> <a class= "item-menu" href="perfil-admin.html"> <i class="far fas fa-user icone-index-admin-ma"></i>Perfil</a></li>
-                <li> <a class= "item-menu" href="../index.html"> <i class="far fas fa-power-off icone-index-admin-ma"></i>Sair</a></li>
-            </ul>
-        </nav>
-    </div>
-</head>
+    <?php include_once 'nav-admin.php'; ?>
 <body>
     <div class="direita">
         <section class="form">
@@ -32,7 +8,7 @@
                     <h2 class="title">Lista de Matérias</h2>
                     <div class="btnArea">
                         <button class="btnSalvar bg-1 text-fff">Salvar</button>
-                        <button class="btnAdicionar bg-1 text-fff"><a href="materias-edit.html" class="a-button">Nova Matéria</a></button> 
+                        <button class="btnAdicionar bg-1 text-fff"><a href="materias-edit.php" class="a-button">Nova Matéria</a></button> 
                     </div>
                 </div>
                 <div class="tableBody">
@@ -60,7 +36,7 @@
                             </div>
 
                             <div class="cell cell-100 text-center">
-                                <a href="materias-edit.html" class="text editar-botao"> <i class="far fas fa-edit icone-acoes-admin"/></i></a>
+                                <a href="materias-edit.php" class="text editar-botao"> <i class="far fas fa-edit icone-acoes-admin"/></i></a>
                                 <a href=""  onclick='return confirm("Tem certeza que quer remover este item?")'> <i class="far fas fa-trash icone-acoes-admin"/></i></a>
                             </div>
 

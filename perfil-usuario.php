@@ -1,67 +1,5 @@
 <html>
-    <head>
-        <title>Cosmo</title>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="assets/css/estilo.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/all.min.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
-
-    <section class="section-imagem-topo">
-        <!--https://codepen.io/kaast/pen/mdbRezE-->
-        <div class="gradiente">
-            <img src="assets/img/logop2.png" class="logo"/>
-
-
-
-            <nav class="menu sidenav">
-                <a href="index.html"><span class="span_um menu">Início</span></a>
-                <a href="materias.html"><span class="span menu">Matérias</span></a>
-                <a href="artesanatos.html"> <span class="span__dois menu">Artesanatos</span> </a>
-                <a href="#" onClick="document.getElementById('id01').style.display = 'block'" style="width:auto;"> <span class="span__tres menu"> Entrar </span> </a>
-
-
-
-            </nav>
-
-            <form id="demo-2">
-                <input type="search" placeholder="Search">
-            </form>
-        </div>
-
-    </section>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <div id="id01" class="modal">
-
-        <form class="modal-content animate">
-            <div class="imgcontainer">
-                <span onclick="document.getElementById('id01').style.display = 'none'" class="close" title="Close Modal">&times;</span>
-                <img src="assets/img/logo.png" alt="Avatar" class="avatar">
-            </div>
-
-            <div class="conteudo-login">
-                <label for="uname">Email</label>
-                <input class="input-email" type="text" placeholder="Insira seu E-mail" name="uname" required>
-
-                <label for="psw">Senha</label>
-                <input class="input-senha"type="password" placeholder="Insira sua senha" name="psw" required>
-
-                <a href="perfil-usuario.html"> <button type="submit" class="button-login">Login</button> </a>
-                <label>
-                    <input type="checkbox" checked="checked" name="remember"> Remember me
-                </label>
-            </div>
-
-            <div class="conteudo-login">
-                <button type="button" onclick="document.getElementById('id01').style.display = 'none'" class="cancelbtn button-login">Cancel</button>
-                <span class="psw">Forgot <a href="#">password?</a></span>
-            </div>
-        </form>
-    </div>
-
-    <a onScroll="document.getElementById('id02').style.display = 'block'" style="width:auto;"> </a>
-
-
-</head>
+    <?php include_once 'nav.php'; ?>
 <body>
     <section class="section">
         <div class="conteudo">
@@ -70,10 +8,10 @@
                 <h1 class="h1-user"> Olá, User </h1>
                 <img class="img-user-perfil" src="assets/img/user-perfil.png">
                 <div class="box-perfil-user">
-                    <p class="p-user"> Usuario Tal <a href="perfil-usuario-edit.html" class="button-edit-user" href="perfil-usuario-edit.html"><i class="far fas fa-edit icone-editar-user"/></i></a> </p>
-                    <p class="p-user"> usuariotal@gmail.com <a href="perfil-usuario-edit.html" class="button-edit-user"><i class="far fas fa-edit icone-editar-user"/></i></a> </p>
-                    <p class="p-user"> ************ <a href="perfil-usuario-edit.html" class="button-edit-user"><i class="far fas fa-edit icone-editar-user"/></i></a> </p>
-                    <a href="index.html" class="button-sair-user"> <i class="far fas fa-power-off button-sair-user"></i>Sair</a>
+                    <p class="p-user"> Usuario Tal <a href="perfil-usuario-edit.php" class="button-edit-user" href="perfil-usuario-edit.php"><i class="far fas fa-edit icone-editar-user"/></i></a> </p>
+                    <p class="p-user"> usuariotal@gmail.com <a href="perfil-usuario-edit.php" class="button-edit-user"><i class="far fas fa-edit icone-editar-user"/></i></a> </p>
+                    <p class="p-user"> ************ <a href="perfil-usuario-edit.php" class="button-edit-user"><i class="far fas fa-edit icone-editar-user"/></i></a> </p>
+                    <a href="index.php" class="button-sair-user"> <i class="far fas fa-power-off button-sair-user"></i>Sair</a>
                 </div>
             </div>
             <div class="direita">
@@ -87,7 +25,7 @@
                     <tr>
                         <td>Teste Título</td>
                         <td>00/00/0000</td>
-                        <td><a style="text-decoration: none;" href="materia.html"> 
+                        <td><a style="text-decoration: none;" href="materia.php"> 
                                 <i class="far fas fa-eye icone-perfil"/></i>
                             </a>
                             <a href="" class="text excluir-botao" onclick='return confirm("Tem certeza que quer remover este item?")'> 
@@ -98,7 +36,7 @@
                     <tr>
                         <td>Teste Título</td>
                         <td>00/00/0000</td>
-                        <td><a style="text-decoration: none;" href="materia.html"> 
+                        <td><a style="text-decoration: none;" href="materia.php"> 
                                 <i class="far fas fa-eye icone-perfil"/></i>
                             </a>
                             <a href="" class="text excluir-botao" onclick='return confirm("Tem certeza que quer remover este item?")'> 
@@ -109,7 +47,7 @@
                     <tr>
                         <td>Teste Título</td>
                         <td>00/00/0000</td>
-                        <td><a style="text-decoration: none;" href="materia.html"> 
+                        <td><a style="text-decoration: none;" href="materia.php"> 
                                 <i class="far fas fa-eye icone-perfil"/></i>
                             </a>
                             <a href="" class="text excluir-botao" onclick='return confirm("Tem certeza que quer remover este item?")'> 
@@ -120,7 +58,7 @@
                     <tr>
                         <td>Teste Título</td>
                         <td>00/00/0000</td>
-                        <td><a style="text-decoration: none;" href="materia.html"> 
+                        <td><a style="text-decoration: none;" href="materia.php"> 
                                 <i class="far fas fa-eye icone-perfil"/></i>
                             </a>
                             <a href="" class="text excluir-botao" onclick='return confirm("Tem certeza que quer remover este item?")'> 
@@ -131,7 +69,7 @@
                     <tr>
                         <td>Teste Título</td>
                         <td>00/00/0000</td>
-                        <td><a style="text-decoration: none;" href="materia.html"> 
+                        <td><a style="text-decoration: none;" href="materia.php"> 
                                 <i class="far fas fa-eye icone-perfil"/></i>
                             </a>
                             <a href="" class="text excluir-botao" onclick='return confirm("Tem certeza que quer remover este item?")'> 
@@ -142,7 +80,7 @@
                     <tr>
                         <td>Teste Título</td>
                         <td>00/00/0000</td>
-                        <td><a style="text-decoration: none;" href="materia.html"> 
+                        <td><a style="text-decoration: none;" href="materia.php"> 
                                 <i class="far fas fa-eye icone-perfil"/></i>
                             </a>
                             <a href="" class="text excluir-botao" onclick='return confirm("Tem certeza que quer remover este item?")'> 
@@ -153,7 +91,7 @@
                     <tr>
                         <td>Teste Título</td>
                         <td>00/00/0000</td>
-                        <td><a style="text-decoration: none;" href="materia.html"> 
+                        <td><a style="text-decoration: none;" href="materia.php"> 
                                 <i class="far fas fa-eye icone-perfil"/></i>
                             </a>
                             <a href="" class="text excluir-botao" onclick='return confirm("Tem certeza que quer remover este item?")'> 
@@ -164,7 +102,7 @@
                     <tr>
                         <td>Teste Título</td>
                         <td>00/00/0000</td>
-                        <td><a style="text-decoration: none;" href="materia.html"> 
+                        <td><a style="text-decoration: none;" href="materia.php"> 
                                 <i class="far fas fa-eye icone-perfil"/></i>
                             </a>
                             <a href="" class="text excluir-botao" onclick='return confirm("Tem certeza que quer remover este item?")'> 
@@ -175,7 +113,7 @@
                     <tr>
                         <td>Teste Título</td>
                         <td>00/00/0000</td>
-                        <td><a style="text-decoration: none;" href="materia.html"> 
+                        <td><a style="text-decoration: none;" href="materia.php"> 
                                 <i class="far fas fa-eye icone-perfil"/></i>
                             </a>
                             <a href="" class="text excluir-botao" onclick='return confirm("Tem certeza que quer remover este item?")'> 
@@ -186,7 +124,7 @@
                     <tr>
                         <td>Teste Título</td>
                         <td>00/00/0000</td>
-                        <td><a style="text-decoration: none;" href="materia.html"> 
+                        <td><a style="text-decoration: none;" href="materia.php"> 
                                 <i class="far fas fa-eye icone-perfil"/></i>
                             </a>
                             <a href="" class="text excluir-botao" onclick='return confirm("Tem certeza que quer remover este item?")'> 

@@ -1,65 +1,5 @@
 <html>
-    <head>
-        <title>Cosmo</title>
-        <meta charset="UTF-8">
-
-        <link rel="stylesheet" type="text/css" href="assets/css/all.min.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/icons.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/estilo.css">
-        <link rel='icon' type="image/png" sizes="32x32" href="assets/img/logo-roxo.png">
-
-    <section class="section-imagem-topo">
-        <!--https://codepen.io/kaast/pen/mdbRezE-->
-        <div class="gradiente">
-            <img src="assets/img/logop2.png" class="logo"/>
-
-
-
-            <nav class="menu sidenav">
-                <a href="index.html"><span class="span_um menu">Início</span></a>
-                <a href="materias.html"><span class="span menu">Matérias</span></a>
-                <a href="artesanatos.html"> <span class="span__dois menu">Artesanatos</span> </a>
-                <a href="#" onClick="document.getElementById('id01').style.display = 'block'" style="width:auto;"> <span class="span__tres menu"> Entrar </span> </a>
-
-
-
-            </nav>
-            <form id="demo-2">
-                <input type="search" placeholder="Search">
-            </form>
-        </div>
-
-    </section>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <div id="id01" class="modal">
-
-        <form class="modal-content animate">
-            <div class="imgcontainer">
-                <span onclick="document.getElementById('id01').style.display = 'none'" class="close" title="Close Modal">&times;</span>
-                <img src="assets/img/logo.png" alt="Avatar" class="avatar">
-            </div>
-
-            <div class="conteudo-login">
-                <label for="uname">Email</label>
-                <input class="input-email" type="text" placeholder="Insira seu E-mail" name="uname" required>
-
-                <label for="psw">Senha</label>
-                <input class="input-senha"type="password" placeholder="Insira sua senha" name="psw" required>
-
-                <a href="perfil-usuario.html"> <button type="submit" class="button-login">Login</button> </a>
-                <label>
-                    <input type="checkbox" checked="checked" name="remember"> Remember me
-                </label>
-            </div>
-
-            <div class="conteudo-login">
-                <button type="button" onclick="document.getElementById('id01').style.display = 'none'" class="cancelbtn button-login">Cancel</button>
-                <span class="psw">Forgot <a href="#">password?</a></span>
-            </div>
-        </form>
-    </div>
-
+    <?php include_once 'nav.php'; ?>
     <div id="id02" class="modal">
 
         <form class="modal-content animate">
@@ -76,11 +16,6 @@
             </div>
         </form>
     </div>
-
-    <a onScroll="document.getElementById('id02').style.display = 'block'" style="width:auto;"> </a>
-
-
-</head>
 <body>
     <section class="section-icones">
         <div class="conteudo">

@@ -215,6 +215,7 @@ h3{
 .p-t{
     color: #452e5b;
     text-align: justify;
+    font-size:16px;
 }
 
 
@@ -543,14 +544,16 @@ hr {
 .button-login {
     background-color: #4CAF50;
     color: white;
-    padding: 14px 20px;
+    padding: 10px 20px;
     margin: 8px 0;
     border: none;
     cursor: pointer;
     width: 100%;
+    text-decoration: none;
+    font-size: 12px;
 }
 
-.button-loggin:hover {
+.button-login:hover {
     opacity: 0.8;
 }
 
@@ -574,9 +577,18 @@ img.avatar {
 }
 
 .conteudo-login {
-    padding: 16px;
+    padding: 15px;
     background-color:#c8bdfc;
+}
 
+.p-cadastrar{
+    color:white;
+}
+.a-cadastrar{
+    color:red;
+    text-decoration: none;
+    font-family: verdana;
+    font-size: 14px;
 }
 
 span.psw {

@@ -1,28 +1,7 @@
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Cosmo Admin</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="assets/css/estilo-admin.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/all.min.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+<?php include_once 'nav-admin.php'; ?>
 
-
-    <div class="faixa"> 
-        <img src="assets/img/logop2.png">
-    </div>
-    <div class="esquerda">
-        <nav class="vertical-menu">
-            <ul>
-                <a href="index-admin.html" class="a-menu"> <li class="active">  <i class="far fas fa-user icone-index-admin"/></i>Olá, Admin </li>  </a>
-                <li> <a class= "item-menu" href="materias-admin.html"> <i class="far fas fa-newspaper icone-index-admin-ma"/></i>Matérias </a></li>
-                <li> <a class= "item-menu" href="artesanatos-admin.html"> <i class="far fas fa-hand-holding-heart icone-index-admin-ma"></i>Artesanatos</a></li>
-                <li> <a class= "item-menu" href="administradores-admin.html"> <i class="far fas fa-users icone-index-admin-ma"></i>Administradores</a></li>
-                <li> <a class= "item-menu" href="perfil-admin.html"> <i class="far fas fa-user icone-index-admin-ma"></i>Perfil</a></li>
-                <li> <a class= "item-menu" href="../index.html"> <i class="far fas fa-power-off icone-index-admin-ma"></i>Sair</a></li>
-            </ul>
-        </nav>
-    </div>
+<body>
     <div class="direita-index">
         <div class="grafico-todo">
             <h1 class="h1-grafico">Horários com mais acesso:</h1>
@@ -70,4 +49,3 @@
 
 <script type="text/javascript" src="assets/js/estilo-admin.js"></script>
 </html>
-
