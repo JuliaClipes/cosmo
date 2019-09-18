@@ -461,40 +461,29 @@ hr {
     color: #4d39b8;
 }
 
-.infos{
-    padding:50px;
-    padding-top:10px;
+.icone-index-admin-info{
+    font-size:100px;
+    color: #4d39b8;
+    margin-bottom: 25px;
 }
 
-.div-icone-index-info-dois{
-    margin-top:50px;
-}
 
-.table-info{
+.titulo-index-info{
+    margin-left: 80px;
+    margin-right: 20px;
     font-family: verdana;
+    font-size:17px;
+    font-weight: bold;
     color:#452e5b;
 }
-
-.tr-info{
+.texto-index-info{
+   margin-bottom:60px;
+    margin-left: 100px;
+    margin-right: 130px;
+    font-family: verdana;
+    font-size: 17px;
     font-weight: bold;
-}
-.td-info{
-    padding-left: 200px;
-    padding-right: 50px;
-}
-.td-icone{
-    margin:0px;
-    padding:0;
-}
-.td-icone--01{
-    top:0;
-}
-
-.td-icone--02{
-    top:0;
-}
-.td2-info{
-    margin-right:20px;
+    color:#452e5b;
 }
 
 .h1-user{

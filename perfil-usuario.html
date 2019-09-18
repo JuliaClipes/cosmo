@@ -70,10 +70,10 @@
                 <h1 class="h1-user"> Olá, User </h1>
                 <img class="img-user-perfil" src="assets/img/user-perfil.png">
                 <div class="box-perfil-user">
-                    <p class="p-user"> Usuario Tal <a class="button-edit-user"><i class="far fas fa-edit icone-editar-user"/></i></a> </p>
-                    <p class="p-user"> usuariotal@gmail.com <a class="button-edit-user"><i class="far fas fa-edit icone-editar-user"/></i></a> </p>
-                    <p class="p-user"> ************ <a class="button-edit-user"><i class="far fas fa-edit icone-editar-user"/></i></a> </p>
-                     <a href="index.html" class="button-sair-user">Sair</a>
+                    <p class="p-user"> Usuario Tal <a href="perfil-usuario-edit.html" class="button-edit-user" href="perfil-usuario-edit.html"><i class="far fas fa-edit icone-editar-user"/></i></a> </p>
+                    <p class="p-user"> usuariotal@gmail.com <a href="perfil-usuario-edit.html" class="button-edit-user"><i class="far fas fa-edit icone-editar-user"/></i></a> </p>
+                    <p class="p-user"> ************ <a href="perfil-usuario-edit.html" class="button-edit-user"><i class="far fas fa-edit icone-editar-user"/></i></a> </p>
+                    <a href="index.html" class="button-sair-user"> <i class="far fas fa-power-off button-sair-user"></i>Sair</a>
                 </div>
             </div>
             <div class="direita">
@@ -131,7 +131,18 @@
                     <tr>
                         <td>Teste Título</td>
                         <td>00/00/0000</td>
-                       <td><a style="text-decoration: none;" href="materia.html"> 
+                        <td><a style="text-decoration: none;" href="materia.html"> 
+                                <i class="far fas fa-eye icone-perfil"/></i>
+                            </a>
+                            <a href="" class="text excluir-botao" onclick='return confirm("Tem certeza que quer remover este item?")'> 
+                                <i class="far fas fa-trash icone-perfil"/></i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Teste Título</td>
+                        <td>00/00/0000</td>
+                        <td><a style="text-decoration: none;" href="materia.html"> 
                                 <i class="far fas fa-eye icone-perfil"/></i>
                             </a>
                             <a href="" class="text excluir-botao" onclick='return confirm("Tem certeza que quer remover este item?")'> 
@@ -164,18 +175,7 @@
                     <tr>
                         <td>Teste Título</td>
                         <td>00/00/0000</td>
-                       <td><a style="text-decoration: none;" href="materia.html"> 
-                                <i class="far fas fa-eye icone-perfil"/></i>
-                            </a>
-                            <a href="" class="text excluir-botao" onclick='return confirm("Tem certeza que quer remover este item?")'> 
-                                <i class="far fas fa-trash icone-perfil"/></i>
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Teste Título</td>
-                        <td>00/00/0000</td>
-                       <td><a style="text-decoration: none;" href="materia.html"> 
+                        <td><a style="text-decoration: none;" href="materia.html"> 
                                 <i class="far fas fa-eye icone-perfil"/></i>
                             </a>
                             <a href="" class="text excluir-botao" onclick='return confirm("Tem certeza que quer remover este item?")'> 
@@ -195,7 +195,7 @@
                         </td>
                     </tr>
                 </table>
-                
+
             </div>
 
 
