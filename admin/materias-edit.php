@@ -1,6 +1,19 @@
 
 <html>
-    <?php include_once 'nav-admin.php'; ?>
+    <?php include_once 'nav-admin.php';
+    
+    if (isset($_POST['nome-cadastro-admin']) && $_POST['nome-cadastro-admin'] != "" 
+        && isset($_POST['senha-cadastro-admin']) && $_POST['senha-cadastro-admin'] != ""
+        && isset($_POST['email-cadastro-admin']) && $_POST['email-cadastro-admin'] != "") {
+
+    $admin_novo = new Admin();
+    $admin_novo->setNomeAdmin($_POST['nome-cadastro-admin']);
+    $admin_novo->setSenhaAdmin($_POST['senha-cadastro-admin']);
+    $admin_novo->setEmailAdmin($_POST['email-cadastro-admin']);
+
+    $adminBanco = new AdminBanco();
+    $adminBanco->insert($admin_novo);
+}?>
 <body>
     <style>
         
@@ -20,7 +33,7 @@
                     </ul> -->
 
                     <section id="editor">
-                        <div id='edit' style="margin-top: 30px;">
+                        <textarea id='edit' style="margin-top: 30px;">
                             <h1>Matéria 1</h1>
 
                             <p>Texto texto Texto texto Texto texto Texto texto Texto texto Texto texto Texto texto Texto texto </p>
@@ -32,7 +45,7 @@
                             <p>Texto final</p>
 
                           
-                        </div>
+                        </textarea>>
                     </section>
                     <div class="tableHeader row">
 

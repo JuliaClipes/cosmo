@@ -64,3 +64,11 @@ function getImg(x){
         fr.readAsDataURL(x.files[0]);
     }
 }
+
+
+var editor = new FroalaEditor('.selector', {}, function () {
+  // Call the method inside the initialized event.
+  editor.html.get(true);
+  
+  console.log(editor);
+})

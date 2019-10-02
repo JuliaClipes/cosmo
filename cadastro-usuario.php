@@ -1,11 +1,26 @@
 <html>
-   <?php include_once 'nav.php'; ?>
+   <?php include_once 'nav.php'; 
+
+//Verifica se veio tudo preenchido do formulário
+if (isset($_POST['nome-cadastro-usuario']) && $_POST['nome-cadastro-usuario'] != "" 
+        && isset($_POST['senha-cadastro-usuario']) && $_POST['senha-cadastro-usuario'] != ""
+        && isset($_POST['email-cadastro-usuario']) && $_POST['email-cadastro-usuario'] != "") {
+
+    $usuario_novo = new Usuario();
+    $usuario_novo->setNomeUsuario($_POST['nome-cadastro-usuario']);
+    $usuario_novo->setSenhaUsuario($_POST['senha-cadastro-usuario']);
+    $usuario_novo->setEmailUsuario($_POST['email-cadastro-usuario']);
+
+    $usuarioBanco = new UsuarioDao();
+    $usuarioBanco->insert($usuario_novo);
+}
+?>
 <body>
     <section class="section">
         <div class="conteudo">
             <form action="" method="POST" enctype="multipart/form-data" class="tableAdmin">
                 <div class="tableHeader row">
-                    <h2 class="title">Usuário Perfil - Editar</h2>
+                    <h2 class="title">Cadastro de Usuário</h2>
                 </div>
                 <div class="tableBody v02">
                     <!--
@@ -16,15 +31,15 @@
                     </ul> -->
                     <div class="formGroup row">
                         <p class="label">Nome:</p>
-                        <input type="text" name="nome-cadastro" class="input">
+                        <input type="text" name="nome-cadastro-usuario" class="input">
                     </div>
                     <div class="formGroup row">
                         <p class="label">E-mail:</p>
-                        <input type="text" name="email-cadastro" class="input">
+                        <input type="text" name="email-cadastro-usuario" class="input">
                     </div>
                     <div class="formGroup row">
                         <p class="label">Senha:</p>
-                        <input type="password" name="senha-cadastro" class="input">
+                        <input type="password" name="senha-cadastro-usuario" class="input">
                     </div>
                     <div class="tableHeader row">
                         <div class="btnArea">
