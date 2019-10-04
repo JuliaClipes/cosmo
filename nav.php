@@ -76,7 +76,7 @@
             <!--a href="perfil-usuario.html"> <button class="button-login">Login</button></a-->    
             <div class="conteudo-login">
                 <button type="button" onclick="document.getElementById('id01').style.display = 'none'" class="cancelbtn button-login">Cancel</button>
-                <a href="perfil-usuario.php" class="button-login">Login</a>
+                <a href="perfil-usuario.php" class="button-login" onclick='return <?php echo $msg ?>'>Login</a>
 
 
             </div>
