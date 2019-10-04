@@ -1,5 +1,6 @@
 <html>
     <?php include_once 'nav-admin.php'; 
+    //Perguntar se pode ser o editar e adicionar junto
     
     if (isset($_POST['nome-cadastro-admin']) && $_POST['nome-cadastro-admin'] != "" 
         && isset($_POST['senha-cadastro-admin']) && $_POST['senha-cadastro-admin'] != ""
@@ -13,7 +14,19 @@
     $adminBanco = new AdminBanco();
     $adminBanco->insert($admin_novo);
 }
+
+
+if (isset($_GET['id_admin']) && $_GET['id_admin'] != "") {
+
+    $admin = new Admin();
+    $admin->setIdAdmin($_GET['id_admin']);
+
+    $adminBanco = new AdminBanco();
+    $adminD = $adminBanco->selectById($admin);
+    
+}
 ?>
+
 <body>
     <div class="direita">
         <section class="form">
@@ -30,15 +43,15 @@
                     </ul> -->
                     <div class="formGroup row">
                         <p class="label">Nome</p>
-                        <input type="text" name="nome-cadastro-administrador" class="input">
+                        <input type="text" name="nome-cadastro-administrador" class="input" value="<?php echo $adminD->getIdAdmin(); ?>">
                     </div>
                     <div class="formGroup row">
                         <p class="label">E-mail</p>
-                        <input type="text" name="email-cadastro-administrador" class="input">
+                        <input type="text" name="email-cadastro-administrador" class="input" value="<?php echo $adminD->getEmailAdmin(); ?>">
                     </div>
                     <div class="formGroup row">
                         <p class="label">Senha</p>
-                        <input type="password" name="senha-cadastro-administrador" class="input">
+                        <input type="password" name="senha-cadastro-administrador" class="input" value="<?php echo $adminD->getSenhaAdmin(); ?>">
                     </div>
 
 
@@ -46,8 +59,8 @@
                     <div class="tableHeader row">
 
                         <div class="btnArea">
-                            <button class="btnCancelar bg-1 text-fff"><a href="administradores-admin.php" class="a-button"> Cancelar</a></button> 
-                            <button class="btnSalvar bg-1 text-fff" onclick='return confirm("Administrador adicionado com sucesso! Confira em Administradores")'>Salvar</button>
+                            <button type="submit" class="btnCancelar bg-1 text-fff"><a href="administradores-admin.php" class="a-button"> Cancelar</a></button> 
+                            <button type="submit" class="btnSalvar bg-1 text-fff" onclick='return confirm("Administrador adicionado com sucesso! Confira em Administradores")'>Salvar</button>
                         </div>
                     </div>
 

@@ -1,5 +1,5 @@
 <html>
-    
+
     <head>
         <title>Cosmo</title>
         <meta charset="UTF-8">
@@ -32,6 +32,27 @@
         </div>
 
     </section>
+
+    <?php
+    include_once 'classes/autoload.php';
+
+    if (isset($_POST['senha_usuario']) && isset($_POST['email_usuario']) && $_POST['senha_usuario'] != "" && $_POST['email_usuario'] != "") {
+        $usuario = new Usuario();
+        $usuario->setEmailUsuario($_POST['email_usuario']);
+        $usuario->setSenhaUsuario($_POST['senha_usuario']);
+
+        $login = new Login();
+        $login = $login->verificaLogin($usuario);
+        if ($login) {
+            header('Location:perfil-usuario.php');
+        } else {
+            header('Location:index.php');  
+        }
+    } else {
+        $msg = "Preencha todos os campos";
+        echo $msg;
+    }
+    ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <div id="id01" class="modal">
 
@@ -43,11 +64,11 @@
 
             <div class="conteudo-login">
                 <label for="uname">Email</label>
-                <input class="input-email" type="text" placeholder="Insira seu E-mail" name="email-login" required>
+                <input class="input-email" type="text" placeholder="Insira seu E-mail" name="email_usuario" required>
             </div>
             <div class="conteudo-login">
                 <label for="psw">Senha</label>
-                <input class="input-senha"type="password" placeholder="Insira sua senha" name="senha-login" required>
+                <input class="input-senha"type="password" placeholder="Insira sua senha" name="senha_usuario" required>
             </div>
             <div class="conteudo-login">
                 <p class="p-cadastrar"> Não é cadastrado? Realize seu cadastro <a class="a-cadastrar" href="cadastro-usuario.php"> AQUI </a>
@@ -62,7 +83,7 @@
         </form>
     </div>
 
-    
+
 
     <a onScroll="document.getElementById('id02').style.display = 'block'" style="width:auto;"> </a>
 
