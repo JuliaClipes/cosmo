@@ -3,13 +3,14 @@
     <head>
         <title>Cosmo</title>
         <meta charset="UTF-8">
-
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="assets/css/all.min.css">
         <link rel="stylesheet" type="text/css" href="assets/css/icons.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="assets/css/estilo.css">
         <link rel='icon' type="image/png" sizes="32x32" href="assets/img/logo-roxo.png">
-
+    </head>
+    
     <section class="section-imagem-topo">
         <!--https://codepen.io/kaast/pen/mdbRezE-->
         <div class="gradiente">
@@ -33,27 +34,8 @@
 
     </section>
 
-    <?php
-    include_once 'classes/autoload.php';
+    
 
-    if (isset($_POST['senha_usuario']) && isset($_POST['email_usuario']) && $_POST['senha_usuario'] != "" && $_POST['email_usuario'] != "") {
-        $usuario = new Usuario();
-        $usuario->setEmailUsuario($_POST['email_usuario']);
-        $usuario->setSenhaUsuario($_POST['senha_usuario']);
-
-        $login = new Login();
-        $login = $login->verificaLogin($usuario);
-        if ($login) {
-            header('Location:perfil-usuario.php');
-        } else {
-            header('Location:index.php');  
-        }
-    } else {
-        $msg = "Preencha todos os campos";
-        echo $msg;
-    }
-    ?>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <div id="id01" class="modal">
 
         <form class="modal-content animate">
@@ -86,7 +68,27 @@
 
 
     <a onScroll="document.getElementById('id02').style.display = 'block'" style="width:auto;"> </a>
+    <?php
+    include_once 'classes/autoload.php';
+
+    if (isset($_POST['senha_usuario']) && isset($_POST['email_usuario']) && $_POST['senha_usuario'] != "" && $_POST['email_usuario'] != "") {
+        $usuario = new Usuario();
+        $usuario->setEmailUsuario($_POST['email_usuario']);
+        $usuario->setSenhaUsuario($_POST['senha_usuario']);
+
+        $login = new Login();
+        $login = $login->verificaLogin($usuario);
+        if ($login) {
+            header('Location:perfil-usuario.php');
+        } else {
+            header('Location:index.php');  
+        }
+    } 
+    //else {
+    //    $msg = "Preencha todos os campos";
+    //    echo $msg;
+    //}
+    ?>
 
 
-</head>
 </html> 

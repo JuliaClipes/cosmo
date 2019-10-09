@@ -1,5 +1,6 @@
 <html>
-<?php include_once 'nav.php'; ?>
+   <?php include_once 'nav.php'; 
+?>
 <body>
     <section class="section">
         <div class="conteudo">
@@ -14,6 +15,7 @@
                         <li>ERROR 01</li>
                         <li>ERROR 02</li>
                     </ul> -->
+                    <div class="cadastro-not"> Erro ao cadastrar. Verifique os dados informados e tente novamente.</div>
                     <div class="formGroup row">
                         <p class="label">Nome:</p>
                         <input type="text" name="nome-cadastro-usuario" class="input">
@@ -29,7 +31,7 @@
                     <div class="tableHeader row">
                         <div class="btnArea">
                             <a href="index.php">  <button class="btnCancelar bg-1 text-fff">Cancelar </button> </a>
-                            <button class="btnSalvar bg-1 text-fff"  >Cadastrar</button>
+                            <button class="btnSalvar bg-1 text-fff" onclick='return confirm("Cadastrado com sucesso!")' >Cadastrar</button>
                         </div>
                     </div>
                 </div>
@@ -51,31 +53,6 @@
 <script type="text/javascript" src="assets/js/estilo.js"></script>
 <script src="assets/js/jquery-1.11.3.min.js" type="text/javascript"></script>
 
-   <?php 
-   
-   error_reporting(E_ERROR | E_PARSE);
 
-//Verifica se veio tudo preenchido do formulário
-if (isset($_POST['nome-cadastro-usuario']) && $_POST['nome-cadastro-usuario'] != "" 
-        && isset($_POST['senha-cadastro-usuario']) && $_POST['senha-cadastro-usuario'] != ""
-        && isset($_POST['email-cadastro-usuario']) && $_POST['email-cadastro-usuario'] != "") {
-
-    $usuario_novo = new Usuario();
-    $usuario_novo->setNomeUsuario($_POST['nome-cadastro-usuario']);
-    $usuario_novo->setSenhaUsuario($_POST['senha-cadastro-usuario']);
-    $usuario_novo->setEmailUsuario($_POST['email-cadastro-usuario']);
-
-    $usuarioBanco = new UsuarioBanco();
-    $retorno = $usuarioBanco->insert($usuario_novo);
-    
-    if($retorno){
-        header('Location: cadastro-usuario-ok.php');
-    } else {
-        header('Location: cadastro-usuario-not.php');
-    }
-} else {
-        header('Location: cadastro-usuario-not.php');
-    }
-?>
 </html>
 

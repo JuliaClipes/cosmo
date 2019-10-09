@@ -2,7 +2,7 @@
 
 class ArtesanatoBanco extends ConexaoBanco implements InterfaceBanco {
 
-    private $tabela_artesanato = 'Artesanatoistrador'; //em laranja o nome da tabela no banco
+    private $tabela_artesanato = 'artesanato'; //em laranja o nome da tabela no banco
 
     public function insert($artesanato_novo) { //$artesanato_novo vem do arquivo artesanatois-edit.php
         $stmt = $this->conexao->prepare("INSERT INTO {$this->tabela_artesanato} (titulo_artesanato_banco, texto_artesanato_banco, img_artesanato_banco) VALUES (:titulo_artesanato, :texto_artesanato, :img_artesanato)"); // insere no banco, com :´são os atributos da classe

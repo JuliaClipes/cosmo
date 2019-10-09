@@ -1,9 +1,9 @@
 <?php
-class BancoDados {
+class ConexaoBanco {
     private $usuario = "root";
     private $senha = "";
     private $host = "localhost";
-    private $banco_dados = "";
+    private $banco_dados = "cosmo";
     
     protected $conexao;
     

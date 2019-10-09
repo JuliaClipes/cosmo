@@ -1050,3 +1050,20 @@ ul {
     width: 100%;
     min-height: 10em;
 }
+
+.cadastro-ok{
+    width: 100%;
+    height:40px;
+    background-color: green;
+    font-family: verdana;
+    color:white;
+    
+}
+.cadastro-not{
+    width: 100%;
+    height:40px;
+    background-color: red;
+    font-family: verdana;
+    color:white;
+    
+}
