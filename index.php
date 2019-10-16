@@ -1,5 +1,8 @@
 <html>
-    <?php include_once 'nav.php'; ?>
+    <?php   
+        include_once 'nav.php';
+        
+    ?>
     <div id="id02" class="modal">
 
         <form class="modal-content animate">

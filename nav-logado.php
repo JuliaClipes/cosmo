@@ -1,5 +1,5 @@
 <html>
-    <?php //include_once 'login/login.php'; ?>
+<?php include_once 'login/login.php'; ?>
     <head>
         <title>Cosmo</title>
         <meta charset="UTF-8">
@@ -22,7 +22,7 @@
                 <a href="index.php"><span class="span_um menu">Início</span></a>
                 <a href="materias.php"><span class="span menu">Matérias</span></a>
                 <a href="artesanatos.php"> <span class="span__dois menu">Artesanatos</span> </a>
-                <a href="#" onClick="document.getElementById('id01').style.display = 'block'" style="width:auto;"> <span class="span__tres menu"> Entrar </span> </a>
+                <a href="perfil-usuario.php"> <span class="span__tres menu"> Perfil </span> </a>
 
 
 
@@ -38,27 +38,27 @@
 
     <div id="id01" class="modal">
 
-        <form class="modal-content animate"  method="POST" action="login/Login.php">
+        <form class="modal-content animate">
             <div class="imgcontainer">
                 <span onclick="document.getElementById('id01').style.display = 'none'" class="close" title="Close Modal">&times;</span>
                 <img src="assets/img/logo.png" alt="Avatar" class="avatar">
             </div>
 
             <div class="conteudo-login">
-                <label for="email_usuario">Email</label>
+                <label for="uname">Email</label>
                 <input class="input-email" type="text" placeholder="Insira seu E-mail" name="email_usuario" required>
             </div>
             <div class="conteudo-login">
-                <label for="senha_usuario">Senha</label>
+                <label for="psw">Senha</label>
                 <input class="input-senha"type="password" placeholder="Insira sua senha" name="senha_usuario" required>
             </div>
             <div class="conteudo-login">
                 <p class="p-cadastrar"> Não é cadastrado? Realize seu cadastro <a class="a-cadastrar" href="cadastro-usuario.php"> AQUI </a>
             </div>
-
+            <!--a href="perfil-usuario.html"> <button class="button-login">Login</button></a-->    
             <div class="conteudo-login">
                 <button type="button" onclick="document.getElementById('id01').style.display = 'none'" class="cancelbtn button-login">Cancel</button>
-                <input type="submit" class="button-login">
+                <a href="perfil-usuario.php" class="button-login" onclick='return <?php echo $msg ?>'>Login</a>
 
 
             </div>
@@ -68,7 +68,7 @@
 
 
     <a onScroll="document.getElementById('id02').style.display = 'block'" style="width:auto;"> </a>
-
-
+   
+  
 
 </html> 

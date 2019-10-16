@@ -1,5 +1,6 @@
 <?php
 
+include_once "ConexaoBanco.php";
 class UsuarioBanco extends ConexaoBanco {
 
     private $tabela_usuario = 'usuario'; //em laranja o nome da tabela no banco
@@ -11,7 +12,11 @@ class UsuarioBanco extends ConexaoBanco {
         $stmt->bindValue(':senha_usuario', $usuario_novo->getSenhaUsuario());
         $stmt->bindValue(':email_usuario', $usuario_novo->getEmailUsuario());
 
-        return $stmt->execute();
+        $b = $stmt->execute();
+        
+        var_dump($b);
+        
+        return $b;
     }
 
     public function update($usuario_novo) {
@@ -52,6 +57,18 @@ class UsuarioBanco extends ConexaoBanco {
             $usuario_novos[] = $usuario_novo;
         }
         return $usuario_novos;
+    }
+    
+    public function login($email, $senha){
+        
+        $stmt = $this->conexao->prepare("SELECT * FROM usuario WHERE email-usuario-banco = '$email' AND senha-usuario-banco = '$senha'");
+        $b = $stmt->execute();
+        
+        var_dump($b);
+        
+        //$b->fetchColumn();
+        
+        //return $b;
     }
 
     //  public function selectById($usuario_novo) {

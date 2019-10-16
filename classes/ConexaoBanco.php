@@ -8,9 +8,11 @@ class ConexaoBanco {
     protected $conexao;
     
     function __construct() {
+       
         $this->conexao = new PDO(
                 "mysql:host={$this->host};dbname={$this->banco_dados}", 
                 $this->usuario, 
                 $this->senha);
+
     }
 }

@@ -1,5 +1,15 @@
 <html>
-   <?php include_once 'nav.php'; ?>
+   <?php include_once 'login/Login.php'; 
+    include_once 'login/Verifica.php'; 
+    
+    if  ($_SESSION['logado'] == true){
+        include_once 'nav-logado.php';
+    } else{
+        include_once 'nav.php';
+    }
+    
+    ?>
+    
 <body>
 
     <section class="section">
