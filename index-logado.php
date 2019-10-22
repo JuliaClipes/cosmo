@@ -1,6 +1,6 @@
 <html>
     <?php   
-        include_once 'nav.php';
+        include_once 'nav-logado.php';
         
     ?>
     <div id="id02" class="modal">

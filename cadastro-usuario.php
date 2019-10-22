@@ -56,24 +56,24 @@
         include_once 'classes/UsuarioBanco.php';
 
    error_reporting(E_ERROR | E_PARSE);
-   echo "aqui";
+   
 //Verifica se veio tudo preenchido do formulário
 if (isset($_POST['nome-cadastro-usuario']) && $_POST['nome-cadastro-usuario'] != "" 
         && isset($_POST['senha-cadastro-usuario']) && $_POST['senha-cadastro-usuario'] != ""
         && isset($_POST['email-cadastro-usuario']) && $_POST['email-cadastro-usuario'] != "") {
     
-    echo "asoiudaiudioasud";
+   
 
     $usuario_novo = new Usuario();
     $usuario_novo->setNomeUsuario($_POST['nome-cadastro-usuario']);
     $usuario_novo->setSenhaUsuario($_POST['senha-cadastro-usuario']);
     $usuario_novo->setEmailUsuario($_POST['email-cadastro-usuario']);
 
-    var_dump($usuario_novo);
     $usuarioBanco = new UsuarioBanco();
     $retorno = $usuarioBanco->insert($usuario_novo);
-    var_dump($retorno);
-    if($retorno){
+
+    if($retorno==true){
+        
         header('location:cadastro-usuario-ok.php');
     } else {
         header('location:cadastro-usuario-not.php');

@@ -4,35 +4,24 @@ include_once '../classes/ConexaoBanco.php';
 include_once '../classes/UsuarioBanco.php';
 
 
-session_start();
+    session_start();
 
-$email = $_POST['email_usuario'];
-$senha = $_POST['senha_usuario'];
+    $email_usuario = $_POST['email_usuario'];
+    $senha_usuario = $_POST['senha_usuario'];
 
-//$sql = "SELECT * FROM usuario WHERE email-usuario-banco = '$email' AND senha-usuario-banco = '$senha'";
-
-
-$c = new UsuarioBanco();
-$vv = $c->login($email, $senha);
-
-var_dump($vv);
-
-//$verifica = mysqli_query($conexao, $sql);
-
-$num_rows = $b->fetchColumn();
-
-var_dump($num_rows);
-
-if ($num_rows <= 0) {
-    unset($_SESSION['login']);
-    unset($_SESSION['senha']);
-    //header('location:index.php');
-} else {
-    $_SESSION['login'] = $login;
-    $_SESSION['senha'] = $senha;
-    $_SESSION['id'] = $id;
-    $_SESSION['logado'] = true;
+    // echo $senha. "----" .$login;  
     
-    //header('location:index.php');
-}
-?>
+
+    $sql = "SELECT * FROM usuario WHERE email_usuario_banco = '$email_usuario' AND senha_usuario_banco = '$senha_usuario'";
+             
+    $verifica = mysqli_query($conexao, $sql);
+    
+    if (mysqli_num_rows($verifica)<=0){
+        unset($_SESSION['email_usuario']);
+        unset($_SESSION['senha_usuario']);
+        header('location:../index.php');
+    }else{
+        $_SESSION['email_usuario'] =  $email_usuario;
+        $_SESSION['senha_usuario'] = $senha_usuario;
+        header('location:../index_logado.php');
+    }

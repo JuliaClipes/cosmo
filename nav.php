@@ -38,7 +38,7 @@
 
     <div id="id01" class="modal">
 
-        <form class="modal-content animate"  method="POST" action="login/Login.php">
+        <form class="modal-content animate"  method="POST" action="login/Verifica.php">
             <div class="imgcontainer">
                 <span onclick="document.getElementById('id01').style.display = 'none'" class="close" title="Close Modal">&times;</span>
                 <img src="assets/img/logo.png" alt="Avatar" class="avatar">
@@ -69,6 +69,22 @@
 
     <a onScroll="document.getElementById('id02').style.display = 'block'" style="width:auto;"> </a>
 
+<?php 
+        include_once 'classes/Usuario.php';
+        include_once 'classes/UsuarioBanco.php';
 
+   error_reporting(E_ERROR | E_PARSE);
+ 
+//Verifica se veio tudo preenchido do formulário
+if (isset($_POST['email-usuario']) && $_POST['email-usuario'] != "" 
+        && isset($_POST['senha-usuario']) && $_POST['senha-usuario'] != "") {
+    
+   
+
+    $usuario = new Usuario();
+    $usuario->setNomeUsuario($_POST['email-usuario']);
+    $usuario->setSenhaUsuario($_POST['senha-usuario']);
+        }
+    ?>
 
 </html> 

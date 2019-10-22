@@ -8,7 +8,7 @@
                     <h2 class="title">Lista de Matérias</h2>
                     <div class="btnArea">
                         <button class="btnSalvar bg-1 text-fff">Salvar</button>
-                        <button class="btnAdicionar bg-1 text-fff"><a href="materias-edit.php" class="a-button">Nova Matéria</a></button> 
+                        <button class="btnAdicionar bg-1 text-fff"><a href="teste.php" class="a-button">Nova Matéria</a></button> 
                     </div>
                 </div>
                 <div class="tableBody">

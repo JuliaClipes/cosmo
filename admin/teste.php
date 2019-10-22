@@ -1,6 +1,3 @@
-
-<?php
-include_once 'nav-admin.php'; ?>
 <html>
 <head>
   <script src="https://cdn.tiny.cloud/1/mjrhzl5vyi3tddj102yi7h5ib9pjjs7s629ira296cp4gl6q/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>

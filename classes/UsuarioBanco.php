@@ -61,7 +61,7 @@ class UsuarioBanco extends ConexaoBanco {
     
     public function login($email, $senha){
         
-        $stmt = $this->conexao->prepare("SELECT * FROM usuario WHERE email-usuario-banco = '$email' AND senha-usuario-banco = '$senha'");
+        $stmt = $this->conexao->prepare("SELECT * FROM usuario WHERE email_usuario_banco = '$email' AND senha_usuario_banco = '$senha'");
         $b = $stmt->execute();
         
         var_dump($b);
