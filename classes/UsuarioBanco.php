@@ -1,6 +1,7 @@
 <?php
 
 include_once "ConexaoBanco.php";
+
 class UsuarioBanco extends ConexaoBanco {
 
     private $tabela_usuario = 'usuario'; //em laranja o nome da tabela no banco
@@ -13,9 +14,9 @@ class UsuarioBanco extends ConexaoBanco {
         $stmt->bindValue(':email_usuario', $usuario_novo->getEmailUsuario());
 
         $b = $stmt->execute();
-        
+
         var_dump($b);
-        
+
         return $b;
     }
 
@@ -58,31 +59,31 @@ class UsuarioBanco extends ConexaoBanco {
         }
         return $usuario_novos;
     }
-    
-    public function login($email, $senha){
-        
+
+    public function login($email, $senha) {
+
         $stmt = $this->conexao->prepare("SELECT * FROM usuario WHERE email_usuario_banco = '$email' AND senha_usuario_banco = '$senha'");
         $b = $stmt->execute();
-        
+
         var_dump($b);
-        
+
         //$b->fetchColumn();
-        
         //return $b;
     }
 
-    //  public function selectById($usuario_novo) {
-    //     $stmt = $this->conexao->prepare("SELECT * FROM $this->tabela_usuario WHERE id_usuario_banco = :id_usuario");
-    //     $stmt->bindValue(':id_usuario', $usuario_novo->getIdUsuario());
-    //     $stmt->execute();
-    //     $linha = $stmt->fetch();
-    //    $usuario_novo = new Usuario();
-    //     $usuario_novo->setNome($linha['nome_usuario_banco']);
-    //     $usuario_novo->setSenha($linha['senha_usuario_banco']);
-    //     $usuario_novo->setEmail($linha['email_usuario_banco']);
-    //     $usuario_novo->setId($linha['id_usuario_banco']);
-    //     return $usuario_novo;
-    // }
-}
+    public function selectById($usuario_novo) {
+        $stmt = $this->conexao->prepare("SELECT * FROM $this->tabela_usuario WHERE id_usuario_banco = $usuario_novo");
+        
+        $stmt->execute();
+        $linha = $stmt->fetchAll();
+        
+        return $linha;
+        //$usuario_novo = new Usuario();
+        //$usuario_novo->setNome($linha['nome_usuario_banco']);
+        //$usuario_novo->setSenha($linha['senha_usuario_banco']);
+        //$usuario_novo->setEmail($linha['email_usuario_banco']);
+        //$usuario_novo->setId($linha['id_usuario_banco']);
+        //return $usuario_novo;
+    }
 
-// OS COMENTADOS PERGUNTAR SE EU PRECISO
+}

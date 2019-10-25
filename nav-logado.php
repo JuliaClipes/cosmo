@@ -1,5 +1,4 @@
 <html>
-<?php include_once 'login/login.php'; ?>
     <head>
         <title>Cosmo</title>
         <meta charset="UTF-8">
