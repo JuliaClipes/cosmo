@@ -1,6 +1,7 @@
 <html>
     <?php
     include_once 'nav-admin.php';
+    include_once '../classes/AdminBanco.php';
 
     $adminBanco = new AdminBanco();
     $lista_admin = $adminBanco->select();
@@ -14,7 +15,7 @@
                         <h2 class="title">Lista de Administradores</h2>
                         <div class="btnArea">
                             <button class="btnSalvar bg-1 text-fff">Salvar</button>
-                            <button class="btnAdicionar bg-1 text-fff"><a href="administrador-edit.php" class="a-button">Novo Administrador</a></button> 
+                            <button class="btnAdicionar bg-1 text-fff"><a href="administrador-cadastro.php" class="a-button">Novo Administrador</a></button> 
                         </div>
                     </div>
                     <div class="tableBody">

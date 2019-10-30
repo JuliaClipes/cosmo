@@ -3,7 +3,7 @@
 <body>
     <section class="section">
         <div class="conteudo">
-            <form action="" method="POST" enctype="multipart/form-data" class="tableAdmin">
+            <form action="classes/cadastro-usuario-c.php" method="POST" enctype="multipart/form-data" class="tableAdmin">
                 <div class="tableHeader row">
                     <h2 class="title">Cadastro de Usuário</h2>
                 </div>
@@ -47,40 +47,4 @@
         <p> JuliaClipes 2019 </p>
     </div>
 
-</body>
-<script type="text/javascript" src="assets/js/estilo.js"></script>
-<script src="assets/js/jquery-1.11.3.min.js" type="text/javascript"></script>
-
-   <?php 
-        include_once 'classes/Usuario.php';
-        include_once 'classes/UsuarioBanco.php';
-
-   error_reporting(E_ERROR | E_PARSE);
-   
-//Verifica se veio tudo preenchido do formulário
-if (isset($_POST['nome-cadastro-usuario']) && $_POST['nome-cadastro-usuario'] != "" 
-        && isset($_POST['senha-cadastro-usuario']) && $_POST['senha-cadastro-usuario'] != ""
-        && isset($_POST['email-cadastro-usuario']) && $_POST['email-cadastro-usuario'] != "") {
-    
-   
-
-    $usuario_novo = new Usuario();
-    $usuario_novo->setNomeUsuario($_POST['nome-cadastro-usuario']);
-    $usuario_novo->setSenhaUsuario($_POST['senha-cadastro-usuario']);
-    $usuario_novo->setEmailUsuario($_POST['email-cadastro-usuario']);
-
-    $usuarioBanco = new UsuarioBanco();
-    $retorno = $usuarioBanco->insert($usuario_novo);
-
-    if($retorno==true){
-        
-        header('location:cadastro-usuario-ok.php');
-    } else {
-        header('location:cadastro-usuario-not.php');
-    }
-} else {
-        header('location:cadastro-usuario-not.php');
-    }
-?>
-</html>
 

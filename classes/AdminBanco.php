@@ -1,5 +1,6 @@
 <?php
-
+include_once "ConexaoBanco.php";
+include_once "Admin.php";
 class AdminBanco extends ConexaoBanco {
 
     private $tabela_admin = 'administrador'; //em laranja o nome da tabela no banco
@@ -54,18 +55,13 @@ class AdminBanco extends ConexaoBanco {
         return $admin_novos;
     }
 
-    //  public function selectById($admin_novo) {
-    //     $stmt = $this->conexao->prepare("SELECT * FROM $this->tabela_admin WHERE id_admin_banco = :id_admin");
-    //     $stmt->bindValue(':id_admin', $admin_novo->getIdAdmin());
-    //     $stmt->execute();
-    //     $linha = $stmt->fetch();
-    //    $admin_novo = new Admin();
-    //     $admin_novo->setNome($linha['nome_admin_banco']);
-    //     $admin_novo->setSenha($linha['senha_admin_banco']);
-    //     $admin_novo->setEmail($linha['email_admin_banco']);
-    //     $admin_novo->setId($linha['id_admin_banco']);
-    //     return $admin_novo;
-    // }
-}
+    public function selectById($admin_novo) {
+        $stmt = $this->conexao->prepare("SELECT * FROM $this->tabela_admin WHERE id_admin_banco = $admin_novo");
 
-// OS COMENTADOS PERGUNTAR SE PRECISA
+        $stmt->execute();
+        $linha = $stmt->fetchAll();
+
+        return $linha;
+    }
+
+}
