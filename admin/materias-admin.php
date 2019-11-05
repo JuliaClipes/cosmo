@@ -1,5 +1,11 @@
 <html>
-    <?php include_once 'nav-admin.php'; ?>
+     <?php
+    include_once 'nav-admin.php';
+    include_once '../classes/MateriaBanco.php';
+
+    $materiaBanco = new MateriaBanco();
+    $lista_materia = $materiaBanco->select();
+    ?>
 <body>
     <div class="direita">
         <section class="form">
@@ -8,7 +14,7 @@
                     <h2 class="title">Lista de Matérias</h2>
                     <div class="btnArea">
                         <button class="btnSalvar bg-1 text-fff">Salvar</button>
-                        <button class="btnAdicionar bg-1 text-fff"><a href="teste.php" class="a-button">Nova Matéria</a></button> 
+                        <button class="btnAdicionar bg-1 text-fff"><a href="materia-cadastro.php" class="a-button">Nova Matéria</a></button> 
                     </div>
                 </div>
                 <div class="tableBody">

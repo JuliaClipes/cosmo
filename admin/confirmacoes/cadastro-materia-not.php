@@ -1,10 +1,10 @@
- <?php include_once 'nav-admin.php'; ?>
+<?php include_once '../nav-admin.php'; ?>
 
     <div class="direita">
         <section class="form">
-            <form action="../classes/cadastro-admin-c.php" method="POST" enctype="multipart/form-data" class="tableAdmin">
+            <form action="../classes/cadastro-materia-c.php" method="POST" enctype="multipart/form-data" class="tableAdmin">
                 <div class="tableHeader row">
-                    <h2 class="title">Administradores - Adicionar</h2>
+                    <h2 class="title">Matérias - Adicionar</h2>
                 </div>
                 <div class="tableBody v02">
                     <!--
@@ -13,17 +13,17 @@
                         <li>ERROR 01</li>
                         <li>ERROR 02</li>
                     </ul> -->
+                    <div class="cadastro-not"> Erro ao cadastrar. Verifique os dados informados e tente novamente.</div>
                     <div class="formGroup row">
-                        <p class="label">Nome</p>
-                        <input type="text" name="nome-cadastro-admin" class="input">
+                        <p class="label">Título:</p>
+                        <input type="text" name="titulo-cadastro-materia" class="input">
                     </div>
                     <div class="formGroup row">
-                        <p class="label">E-mail</p>
-                        <input type="text" name="email-cadastro-admin" class="input">
+                        <p class="label">Texto: </p>
+                        <textarea name="texto-cadastro-materia" class="input"></textarea>
                     </div>
                     <div class="formGroup row">
-                        <p class="label">Senha</p>
-                        <input type="password" name="senha-cadastro-admin" class="input">
+                        <input type="file" name="img-cadastro-materia" class="input">
                     </div>
 
 
@@ -43,4 +43,4 @@
     </div>
 </body>
 
-  <?php include_once 'footer-admin.php'; ?>
+  <?php include_once '../footer-admin.php'; ?>

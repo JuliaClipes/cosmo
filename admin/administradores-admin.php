@@ -28,23 +28,18 @@
                             <div class="cell2 cell-100 text-center text-fff">Ação</div>
                         </div>
                         <!--   BEGIN LOOP -->
-                        <ul class="list lv01">
-                            <li class="row">
-                                <?php foreach ($lista_admin as $admin): ?>
+                        <?php foreach ($lista_admin as $admin): ?>
+                            <ul class="list lv01">
+                                <li class="row">
                                     <div class="cell cell-50 text-center"><?php echo $admin->getIdAdmin(); ?></div>
                                     <div class="cell cell-100"><?php echo $admin->getNomeAdmin(); ?></div>
-                                    <div class="cell cell-100 text-center">
-                                    </div>
                                     <div class="cell cell-100p"><?php echo $admin->getEmailAdmin(); ?></div>
-                                    <div class="cell cell-100">
-                                    </div>
-
                                     <div class="cell cell-100 text-center">
                                         <a onclick="window.location = 'administrador-edit.php?id=<?php echo $admin->getIdAdmin(); ?>';"> <i class="far fas fa-plus icone-acoes-admin"/></i></a>
                                     </div>
-                                <?php endforeach; ?> 
-                            </li>
-                        </ul>
+                                </li>
+                            </ul>
+                        <?php endforeach; ?> 
                         <!--   END LOOP -->
                     </div>
                 </form>

@@ -1,4 +1,4 @@
 <?php
-//por que não ta obedecendo o css?
-// Quando cadastro novo usuario não aparece as página de sucesso e erro
+//Nas confirmacoes não carrega o NAV no include pq não sai da pasta "confirmacoes"
+//Como salvar imagens com o input file no admin/cadastrar-materias.php
 

@@ -19,11 +19,11 @@ if (isset($_POST['nome-cadastro-admin']) && $_POST['nome-cadastro-admin'] != "" 
     $retorno = $adminBanco->insert($admin_novo);
 
     if ($retorno) {
-        header('location:../admin/cadastro-admin-ok.php');
+        header('location:../admin/confirmacoes/cadastro-admin-ok.php');
     } else {
-        header('location:../admin/cadastro-admin-not.php');
+        header('location:../admin/confirmacoes/cadastro-admin-not.php');
     }
 } else {
-    header('location:../admin/cadastro-admin-not.php');
+    header('location:../admin/confirmacoes/cadastro-admin-not.php');
 }
 ?>
