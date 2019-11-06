@@ -18,7 +18,7 @@
         <div class="esquerda">
             <nav class="vertical-menu">
                 <ul>
-                    <a href="index.php" class="a-menu"> <li class="active">  <i class="far fas fa-user icone-index-admin"/></i>Olá, Admin </li>  </a>
+                    <a href="index.php" class="a-menu"> <li class="active">  <i class="far fas fa-user icone-index-admin"/></i>Olá, Admin</li>  </a>
                     <li> <a class= "item-menu" href="materias-admin.php"> <i class="far fas fa-newspaper icone-index-admin-ma"/></i>Matérias </a></li>
                     <li> <a class= "item-menu" href="artesanatos-admin.php"> <i class="far fas fa-hand-holding-heart icone-index-admin-ma"></i>Artesanatos</a></li>
                     <li> <a class= "item-menu" href="administradores-admin.php"> <i class="far fas fa-users icone-index-admin-ma"></i>Administradores</a></li>

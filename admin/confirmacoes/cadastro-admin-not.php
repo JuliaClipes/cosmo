@@ -1,4 +1,4 @@
- <?php include_once '../nav-admin.php'; ?>
+<?php include_once 'nav-admin-c.php'; ?>
         <div class="direita">
             <section class="form">
                 <form action="classes/cadastro-admin-c.php" method="POST" enctype="multipart/form-data" class="tableAdmin">

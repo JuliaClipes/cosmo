@@ -1,17 +1,19 @@
 <?php
 include_once "ConexaoBanco.php";
-include_once "MateriaBanco.php";
+include_once "Materia.php";
 
 class MateriaBanco extends ConexaoBanco {
 
     private $tabela_materia = 'materia'; //em laranja o nome da tabela no banco
 
     public function insert($materia_novo) { //$materia_novo vem do arquivo materiais-edit.php
+        
+        var_dump($materia_novo);
         $stmt = $this->conexao->prepare("INSERT INTO {$this->tabela_materia} (img_materia_banco,texto_materia_banco, titulo_materia_banco ) VALUES (:img_materia, :texto_materia,:titulo_materia)"); // insere no banco, com :´são os atributos da classe
 
-        $stmt->bindValue(':titulo_materia', $materia_novo->getNomeMateria());
-        $stmt->bindValue(':texto_materia', $materia_novo->getSenhaMateria());
-        $stmt->bindValue(':img_materia', $materia_novo->getEmailMateria());
+        $stmt->bindValue(':titulo_materia', $materia_novo->getTituloMateria());
+        $stmt->bindValue(':texto_materia', $materia_novo->getTextoMateria());
+        $stmt->bindValue(':img_materia', $materia_novo->getImgMateria());
 
         return $stmt->execute();
     }
@@ -21,9 +23,9 @@ class MateriaBanco extends ConexaoBanco {
                 . "SET img_materia_banco = :img_materia, texto_materia_banco = :texto_materia, titulo_materia_banco=:titulo_materia  WHERE id_materia_banco = :id_materia;");
 
         $stmt->bindValue(':id_materia', $materia_novo->getIdMateria());
-        $stmt->bindValue(':img_materia', $materia_novo->getEmailMateria());
-        $stmt->bindValue(':texto_materia', $materia_novo->getSenhaMateria());
-        $stmt->bindValue(':titulo_materia', $materia_novo->getNomeMateria());
+        $stmt->bindValue(':img_materia', $materia_novo->getImgMateria());
+        $stmt->bindValue(':texto_materia', $materia_novo->getTextoMateria());
+        $stmt->bindValue(':titulo_materia', $materia_novo->getTituloMateria());
 
 
 
@@ -48,9 +50,9 @@ class MateriaBanco extends ConexaoBanco {
         while ($linha = $stmt->fetch()) {
             $materia_novo = new Materia();
             $materia_novo->setIdMateria($linha['id_materia_banco']);
-            $materia_novo->setEmailMateria($linha['img_materia_banco']);
-            $materia_novo->setSenhaMateria($linha['texto_materia_banco']);
-            $materia_novo->setNomeMateria($linha['titulo_materia_banco']);
+            $materia_novo->setImgMateria($linha['img_materia_banco']);
+            $materia_novo->setTextoMateria($linha['texto_materia_banco']);
+            $materia_novo->setTituloMateria($linha['titulo_materia_banco']);
 
 
 
@@ -66,10 +68,10 @@ class MateriaBanco extends ConexaoBanco {
         $stmt->execute();
         $linha = $stmt->fetch();
         $materia_novo = new Materia();
-        $materia_novo->setEmail($linha['img_materia_banco']);
+        $materia_novo->setImg($linha['img_materia_banco']);
         $materia_novo->setId($linha['id_materia_banco']);
-        $materia_novo->setSenha($linha['texto_materia_banco']);
-        $materia_novo->setNome($linha['titulo_materia_banco']);
+        $materia_novo->setTexto($linha['texto_materia_banco']);
+        $materia_novo->setTitulo($linha['titulo_materia_banco']);
 
 
         return $materia_novo;

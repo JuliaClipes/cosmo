@@ -8,7 +8,8 @@ include_once '../classes/AdminBanco.php';
 session_start();
 
 $email_usuario = $_POST['email_usuario'];
-$senha_usuario = md5($_POST['senha_usuario']);
+//$senha_usuario = md5($_POST['senha_usuario']);
+$senha_usuario = $_POST['senha_usuario'];
 
 // echo $senha. "----" .$login;  
 $conexao = mysqli_connect('localhost', 'root', '', 'cosmo');
@@ -34,14 +35,16 @@ if ($verifica->lengths != NULL) {
         header('location:../perfil-usuario.php');
     }
 } else {
-    var_dump($email_usuario, $senha_usuario);
+   
     echo "adm";
     $sql = "SELECT * FROM administrador WHERE email_admin_banco = '$email_usuario' AND senha_admin_banco = '$senha_usuario'";
 
     $verifica = mysqli_query($conexao, $sql);
+    
+    var_dump($verifica);
     $row = mysqli_fetch_assoc($verifica);
 
-    var_dump($verifica);
+    
     if (mysqli_num_rows($verifica) <= 0) {
         unset($_SESSION['email_usuario']);
         unset($_SESSION['senha_usuario']);

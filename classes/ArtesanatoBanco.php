@@ -1,15 +1,18 @@
 <?php
 
-class ArtesanatoBanco extends ConexaoBanco implements InterfaceBanco {
+include_once 'ConexaoBanco.php';
+include_once 'Artesanato.php';
+
+class ArtesanatoBanco extends ConexaoBanco {
 
     private $tabela_artesanato = 'artesanato'; //em laranja o nome da tabela no banco
 
     public function insert($artesanato_novo) { //$artesanato_novo vem do arquivo artesanatois-edit.php
         $stmt = $this->conexao->prepare("INSERT INTO {$this->tabela_artesanato} (titulo_artesanato_banco, texto_artesanato_banco, img_artesanato_banco) VALUES (:titulo_artesanato, :texto_artesanato, :img_artesanato)"); // insere no banco, com :´são os atributos da classe
 
-        $stmt->bindValue(':titulo_artesanato', $artesanato_novo->getNomeArtesanato());
-        $stmt->bindValue(':texto_artesanato', $artesanato_novo->getSenhaArtesanato());
-        $stmt->bindValue(':img_artesanato', $artesanato_novo->getEmailArtesanato());
+        $stmt->bindValue(':titulo_artesanato', $artesanato_novo->getTituloArtesanato());
+        $stmt->bindValue(':texto_artesanato', $artesanato_novo->getTextoArtesanato());
+        $stmt->bindValue(':img_artesanato', $artesanato_novo->getImgArtesanato());
 
         return $stmt->execute();
     }
@@ -19,9 +22,9 @@ class ArtesanatoBanco extends ConexaoBanco implements InterfaceBanco {
                 . "SET titulo_artesanato_banco=:titulo_artesanato, texto_artesanato_banco = :texto_artesanato, img_artesanato_banco = :img_artesanato WHERE id_artesanato_banco = :id_artesanato;");
 
         $stmt->bindValue(':id_artesanato', $artesanato_novo->getIdArtesanato());
-        $stmt->bindValue(':titulo_artesanato', $artesanato_novo->getNomeArtesanato());
-        $stmt->bindValue(':texto_artesanato', $artesanato_novo->getSenhaArtesanato());
-        $stmt->bindValue(':img_artesanato', $artesanato_novo->getEmailArtesanato());
+        $stmt->bindValue(':titulo_artesanato', $artesanato_novo->getTituloArtesanato());
+        $stmt->bindValue(':texto_artesanato', $artesanato_novo->getTextoArtesanato());
+        $stmt->bindValue(':img_artesanato', $artesanato_novo->getImgArtesanato());
 
         return $stmt->execute();
     }
@@ -44,9 +47,9 @@ class ArtesanatoBanco extends ConexaoBanco implements InterfaceBanco {
         while ($linha = $stmt->fetch()) {
             $artesanato_novo = new Artesanato();
             $artesanato_novo->setIdArtesanato($linha['id_artesanato_banco']);
-            $artesanato_novo->setNomeArtesanato($linha['titulo_artesanato_banco']);
-            $artesanato_novo->setSenhaArtesanato($linha['texto_artesanato_banco']);
-            $artesanato_novo->setEmailArtesanato($linha['img_artesanato_banco']);
+            $artesanato_novo->setTituloArtesanato($linha['titulo_artesanato_banco']);
+            $artesanato_novo->setTextoArtesanato($linha['texto_artesanato_banco']);
+            $artesanato_novo->setImgArtesanato($linha['img_artesanato_banco']);
 
 
             $artesanato_novos[] = $artesanato_novo;
@@ -60,9 +63,9 @@ class ArtesanatoBanco extends ConexaoBanco implements InterfaceBanco {
         $stmt->execute();
         $linha = $stmt->fetch();
         $artesanato_novo = new Artesanato();
-        $artesanato_novo->setNome($linha['titulo_artesanato_banco']);
-        $artesanato_novo->setSenha($linha['texto_artesanato_banco']);
-        $artesanato_novo->setEmail($linha['img_artesanato_banco']);
+        $artesanato_novo->setTitulo($linha['titulo_artesanato_banco']);
+        $artesanato_novo->setTexto($linha['texto_artesanato_banco']);
+        $artesanato_novo->setImg($linha['img_artesanato_banco']);
         $artesanato_novo->setId($linha['id_artesanato_banco']);
         return $artesanato_novo;
     }

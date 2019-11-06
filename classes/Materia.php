@@ -21,6 +21,9 @@ class Materia {
     function getImgMateria() {
         return $this->img_materia;
     }
+     function setIdMateria($id_materia_) {
+        $this->id_materia = $id_materia_;
+    }
 
     function setTituloMateria($titulo_materia_) {
         $this->titulo_materia = $titulo_materia_;

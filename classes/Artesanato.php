@@ -22,6 +22,9 @@ class Artesanato {
         return $this->img_artesanato;
     }
 
+     function setIdArtesanato($id_artesanato_) {
+       $this->id_artesanato = $id_artesanato_;
+    }
     function setTituloArtesanato($titulo_artesanato_) {
         $this->titulo_artesanato = $titulo_artesanato_;
     }
