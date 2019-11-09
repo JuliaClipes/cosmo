@@ -19,7 +19,6 @@ if (isset($_POST['nome-cadastro-usuario']) && $_POST['nome-cadastro-usuario'] !=
     $retorno = $usuarioBanco->insert($usuario_novo);
 
     if ($retorno) {
-        echo 'AQUI';
         header('location:../cadastro-usuario-ok.php');
     } else {
         header('location:../cadastro-usuario-not.php');

@@ -1,18 +1,13 @@
-  <?php include_once 'nav-admin.php'; ?>
+<?php include_once 'nav-admin-c.php'; ?>
 
     <div class="direita">
         <section class="form">
             <form action="../classes/cadastro-materia-c.php" method="POST" enctype="multipart/form-data" class="tableAdmin">
                 <div class="tableHeader row">
-                    <h2 class="title">Matérias - Adicionar</h2>
+                    <h2 class="title">Matérias - Editar</h2>
                 </div>
                 <div class="tableBody v02">
-                    <!--
-                    <p class="successArea">Success</p>
-                    <ul class="errorArea">
-                        <li>ERROR 01</li>
-                        <li>ERROR 02</li>
-                    </ul> -->
+                    <div class="cadastro-not"> Erro ao editar. Verifique os dados informados e tente novamente.</div>
                     <div class="formGroup row">
                         <p class="label">Título:</p>
                         <input type="text" name="titulo-cadastro-materia" class="input">
@@ -22,7 +17,6 @@
                         <textarea name="texto-cadastro-materia" class="input"></textarea>
                     </div>
                     <div class="formGroup row">
-                        <p class="label">Imagem:</p>
                         <input type="file" name="img-cadastro-materia" class="input">
                     </div>
 
@@ -43,4 +37,4 @@
     </div>
 </body>
 
-  <?php include_once 'footer-admin.php'; ?>
+  <?php include_once '../footer-admin.php'; ?>

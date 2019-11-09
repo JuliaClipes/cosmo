@@ -28,13 +28,13 @@
                     <?php foreach ($lista_materia as $materia): ?>
                     <ul class="list lv01">
                         <li class="row">
-                            <div class="cell cell-50"> <?php echo $materia->getIdMateria(); ?></div>
+                            <div class="cell cell-50" name="id_materia_lista"> <?php echo $materia->getIdMateria(); ?></div>
                             <div class="cell cell-100 text-center"><?php echo $materia->getTituloMateria(); ?></div>
                             <div class="cell cell-100p text-center"><?php echo $materia->getTextoMateria(); ?></div>
                             <div class="cell cell-100"><img src="assets/img-temporaria/<?php echo $materia->getImgMateria(); ?>" class="img-lista"></div>
 
                             <div class="cell cell-100 text-center">
-                                <a href="materias-edit.php" class="text editar-botao"> <i class="far fas fa-edit icone-acoes-admin"/></i></a>
+                                <a onclick="window.location='materia-editar.php?id=<?php echo $materia->getIdMateria(); ?>';"class="text editar-botao"> <i class="far fas fa-edit icone-acoes-admin"/></i></a>
                                 <a href=""  onclick='return confirm("Tem certeza que quer remover este item?")'> <i class="far fas fa-trash icone-acoes-admin"/></i></a>
                             </div>
 

@@ -8,7 +8,7 @@
         <link rel="stylesheet" type="text/css" href="../assets/css/styles.css">
         <link rel="stylesheet" type="text/css" href="../assets/css/estilo-admin.css">
 
-        <link rel='icon' type="image/png" sizes="32x32" href="../assets/img/logo-roxo.png">
+        <link rel='icon' type="image/png" sizes="32x32" href="../../assets/img/logo-roxo.png">
 
     </head>
     <body>

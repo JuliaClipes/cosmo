@@ -24,7 +24,6 @@ if (isset($_POST['titulo-cadastro-materia']) && $_POST['titulo-cadastro-materia'
     $materiaBanco = new MateriaBanco();
     $retorno = $materiaBanco->insert($materia_novo);
     
-    var_dump($retorno);
 
     if ($retorno) {
         header('location:../admin/confirmacoes/cadastro-materia-ok.php');

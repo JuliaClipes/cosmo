@@ -8,7 +8,6 @@ include_once '../classes/AdminBanco.php';
 session_start();
 
 $email_usuario = $_POST['email_usuario'];
-//$senha_usuario = md5($_POST['senha_usuario']);
 $senha_usuario = md5($_POST['senha_usuario']);
 
 // echo $senha. "----" .$login;  
@@ -20,8 +19,9 @@ if (!$conexao) {
 
 $sql = "SELECT * FROM usuario WHERE email_usuario_banco = '$email_usuario' AND senha_usuario_banco = '$senha_usuario'";
 
-
 $verifica = mysqli_query($conexao, $sql);
+
+var_dump($verifica);
 
 if ($verifica->lengths != NULL) {
     
@@ -41,6 +41,8 @@ if ($verifica->lengths != NULL) {
     $sql = "SELECT * FROM administrador WHERE email_admin_banco = '$email_usuario' AND senha_admin_banco = '$senha_usuario'";
 
     $verifica = mysqli_query($conexao, $sql);
+    
+    var_dump($verifica);
     
     $row = mysqli_fetch_assoc($verifica);
 
