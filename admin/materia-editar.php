@@ -16,6 +16,8 @@
                 <?php foreach ($lista_materia as $materia): ?>
                 <div class="tableBody v02">
                     <div class="formGroup row">
+                        
+                        <input type="hidden" name="id-edita-materia" class="input" value="<?php echo $materia->getIdMateria(); ?>">
                         <p class="label">Título:</p>
                         <input type="text" name="titulo-edita-materia" class="input" value="<?php echo $materia->getTituloMateria(); ?>">
                     </div>
@@ -26,11 +28,12 @@
                     
                     <div class="formGroup row">
                        <p class="label">Imagem Atual:</p>
-                        <img src="assets/img-temporaria/<?php echo $materia->getImgMateria(); ?>" class="img-lista">
+                        <img src="assets/img-temporaria/<?php echo $materia->getImgMateria(); ?>" name="img-edita-materia-antiga" value="<?php echo $materia->getImgMateria(); ?>" class="img-lista">
+                        <input type="hidden" name="img-edita-materia-antiga" value="<?php echo $materia->getImgMateria(); ?>">
                     </div>
                     <p class="label">Nova Imagem:</p>
                     <div class="formGroup row">
-                        <input type="file" name="img-edita-materia" class="input" value="">
+                        <input type="file" name="img-edita-materia" class="input">
                     </div>
                       <?php endforeach; ?> 
 

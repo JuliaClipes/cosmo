@@ -21,37 +21,23 @@ $sql = "SELECT * FROM usuario WHERE email_usuario_banco = '$email_usuario' AND s
 
 $verifica = mysqli_query($conexao, $sql);
 
-var_dump($verifica);
+var_dump($verifica->num_rows);
 
-if ($verifica->lengths != NULL) {
-    
-
-    $row = mysqli_fetch_assoc($verifica);
-    if (mysqli_num_rows($verifica) <= 0) {
-        unset($_SESSION['email_usuario']);
-        unset($_SESSION['senha_usuario']);
-        //header('location:../index.php');
-    } else {
-        $_SESSION['id_user'] = $row['id_usuario_banco'];
-        header('location:../perfil-usuario.php');
-    }
+if ($verifica->num_rows > 0) {
+    $_SESSION['id_user'] = $row['id_usuario_banco'];
+    $_SESSION['tipo'] = 'usuario';
+    header('location:../perfil-usuario.php');
 } else {
-   
 
     $sql = "SELECT * FROM administrador WHERE email_admin_banco = '$email_usuario' AND senha_admin_banco = '$senha_usuario'";
 
     $verifica = mysqli_query($conexao, $sql);
-    
-    var_dump($verifica);
-    
-    $row = mysqli_fetch_assoc($verifica);
+    //var_dump($sql, $verifica->num_rows);die;
 
-    
-    if (mysqli_num_rows($verifica) <= 0) {
-        unset($_SESSION['email_usuario']);
-        unset($_SESSION['senha_usuario']);
-        //header('location:../index.php');
+    if ($verifica->num_rows <= 0) {
+        header('location:../index.php');
     } else {
+        $_SESSION['tipo'] = 'adm';
         $_SESSION['id_admin'] = $row['id_admin_banco'];
         header('location:../admin/perfil-admin.php');
     }

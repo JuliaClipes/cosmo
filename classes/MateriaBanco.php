@@ -19,17 +19,18 @@ class MateriaBanco extends ConexaoBanco {
     }
 
     public function update($materia_novo) {
-        $stmt = $this->conexao->prepare("UPDATE {$this->tabela_materia} "
-                . "SET img_materia_banco = :img_materia, texto_materia_banco = :texto_materia, titulo_materia_banco=:titulo_materia  WHERE id_materia_banco = :id_materia;");
+        
+        var_dump($materia_novo);
+        $stmt = $this->conexao->prepare("UPDATE $this->tabela_materia SET img_materia_banco = :img_materia, texto_materia_banco = :texto_materia, titulo_materia_banco=:titulo_materia  WHERE id_materia_banco = :id_materia;");
 
         $stmt->bindValue(':id_materia', $materia_novo->getIdMateria());
-        $stmt->bindValue(':img_edita_materia', $materia_novo->getImgMateria());
-        $stmt->bindValue(':texto_edita_materia', $materia_novo->getTextoMateria());
-        $stmt->bindValue(':titulo_edita_materia', $materia_novo->getTituloMateria());
+        $stmt->bindValue(':img_materia', $materia_novo->getImgMateria());
+        $stmt->bindValue(':texto_materia', $materia_novo->getTextoMateria());
+        $stmt->bindValue(':titulo_materia', $materia_novo->getTituloMateria());
 
+        $a = $stmt->execute();
 
-
-        return $stmt->execute();
+        return $a;
     }
 
     public function delete($materia_novo) {
