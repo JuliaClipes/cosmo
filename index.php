@@ -1,7 +1,10 @@
 <html>
-    <?php   
-        include_once 'nav.php';
-        
+    <?php
+    include_once 'nav.php';
+    include_once 'classes/MateriaBanco.php';
+
+    $materiaBanco = new MateriaBanco();
+    $lista_materia = $materiaBanco->select();
     ?>
     <div id="id02" class="modal">
 
@@ -40,25 +43,16 @@
     <section class="section">
         <div class="conteudo">
             <h1> Matérias Recentes </h1>
-            <div class="row">
-                <div class="materia-item">
-                    <h3> Título </h3>
-                    <img src="assets/img/materia-ilustra.png">
-                    <p class="p-t"> <span>&nbsp;&nbsp;</span>Texto ilustrativo texto ilustrativo texto ilustrativo texto ilustrativo texto ilustrativo... <a class="c-continuar-lendo" href="materia.html"> Continuar lendo </a> </p> 
+            <?php foreach ($lista_materia as $materia): ?>
+                <div class="row">
+                    <div class="materia-item">
+                        <h3> <?php echo $materia->getTituloMateria(); ?> </h3>
+                        <img src="admin/assets/img-temporaria/<?php echo $materia->getImgMateria(); ?>" class="img-exibir">
+                        <p class="p-t"> <span>&nbsp;&nbsp;</span><?php echo $materia->getTextoMateria(); ?> <a class="c-continuar-lendo" href="materia.html"> Continuar lendo </a> </p> 
 
-                </div>
-                <div class="materia-item">
-                    <h3> Titulo</h3>
-                    <img src="assets/img/materia-ilustra.png">
-                    <p class="p-t"> <span>&nbsp;&nbsp;</span>Texto ilustrativo texto ilustrativo texto ilustrativo texto ilustrativo texto ilustrativo... <a class="c-continuar-lendo" href="materia.html"> Continuar lendo </a> </p>
-                </div>
-                <div class="materia-item">
-                    <h3> Titulo</h3>
-                    <img src="assets/img/materia-ilustra.png">
-                    <p class="p-t"> <span>&nbsp;&nbsp;</span>Texto ilustrativo texto ilustrativo texto ilustrativo texto ilustrativo texto ilustrativo... <a class="c-continuar-lendo" href="materia.html"> Continuar lendo </a></p>
-                </div>
+                    </div>
+                <?php endforeach; ?> 
             </div>
-        </div>
 
     </section>
     <hr>
@@ -69,7 +63,7 @@
 
             <div class="div-esquerda-contato"> 
                 <article>
-                    <p class="p-footer"> (00) 0 0000-0000 </p>
+                    <p class="p-footer"> (11) 9 8765-4321 </p>
                     <p class="p-footer"> contato@cosmo.com </p>
                     <div class="icones-social">
                         <a href="#" class="fa fa-facebook"></a>
@@ -95,7 +89,7 @@
         <p> JuliaClipes 2019 </p>
     </div>
 
-<script type="text/javascript" src="assets/js/estilo.js"></script>
-<script type="text/javascript" src="assets/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="assets/js/estilo.js"></script>
+    <script type="text/javascript" src="assets/js/jquery-1.11.3.min.js"></script>
 
 
