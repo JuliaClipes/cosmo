@@ -1,6 +1,8 @@
 <?php
 include_once 'nav-admin.php';
 include_once '../classes/MateriaBanco.php';
+//include_once '../login/Verifica.php';
+
 
 $materiaBanco = new MateriaBanco();
 $lista_materia = $materiaBanco->select();

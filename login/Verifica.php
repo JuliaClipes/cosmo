@@ -8,7 +8,7 @@
         if($_SESSION['tipo'] == 'adm'){
             /*header("location:");*/   
         } else{
-            header("location:");   // levar para perfil
+            header("location:../perfil_usuario.php");   // levar para perfil
         }
     }
     

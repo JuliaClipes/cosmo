@@ -1,6 +1,5 @@
 <?php
-include_once 'nav-admin.php';
-include_once '../classes/AdminBanco.php';
+include_once '../../classes/AdminBanco.php';
 
 $adminBanco = new AdminBanco();
 $lista_admin = $adminBanco->select();

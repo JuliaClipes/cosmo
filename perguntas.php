@@ -4,5 +4,7 @@
 //https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_word-wrap texto index
 
 //editar abre todas coisas juntas
+//Erros no perfil do Login = array de array
+//Verifica.php não funciona
 
 

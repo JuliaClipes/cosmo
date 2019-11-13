@@ -21,7 +21,6 @@ $sql = "SELECT * FROM usuario WHERE email_usuario_banco = '$email_usuario' AND s
 
 $verifica = mysqli_query($conexao, $sql);
 
-var_dump($verifica->num_rows);
 
 if ($verifica->num_rows > 0) {
     $_SESSION['id_user'] = $row['id_usuario_banco'];
@@ -32,10 +31,10 @@ if ($verifica->num_rows > 0) {
     $sql = "SELECT * FROM administrador WHERE email_admin_banco = '$email_usuario' AND senha_admin_banco = '$senha_usuario'";
 
     $verifica = mysqli_query($conexao, $sql);
-    //var_dump($sql, $verifica->num_rows);die;
+   
 
     if ($verifica->num_rows <= 0) {
-        header('location:../index.php');
+        //header('location:../index.php');
     } else {
         $_SESSION['tipo'] = 'adm';
         $_SESSION['id_admin'] = $row['id_admin_banco'];

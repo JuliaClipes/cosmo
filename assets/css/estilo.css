@@ -150,7 +150,6 @@ body{
 
 .row{
     display:flex;
-    align-items: center;
     justify-content:center;
 }
 
@@ -211,7 +210,7 @@ h3{
     color: #452e5b;
     text-align: justify;
     font-size:16px;
-    word-wrap: break-word;
+
 }
 
 
@@ -358,6 +357,7 @@ hr {
     padding-left: 5%;
     padding-right: 6%;
     width: 300px;
+    
 }
 .materia-item-m{
     padding-left: 2%;
@@ -476,13 +476,13 @@ hr {
 }
 
 .fa {
-  padding: 15px;
-  font-size: 30px;
-  width: 30px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-  border-radius: 50%;
+    padding: 15px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
 }
 
 .fa:hover {
@@ -490,23 +490,23 @@ hr {
 }
 
 .fa-facebook {
-  background: #3B5998;
-  color: white;
+    background: #3B5998;
+    color: white;
 }
 
 .fa-twitter {
-  background: #55ACEE;
-  color: white;
+    background: #55ACEE;
+    color: white;
 }
 
 .fa-google {
-  background: #dd4b39;
-  color: white;
+    background: #dd4b39;
+    color: white;
 }
 
 .fa-instagram {
-  background: #125688;
-  color: white;
+    background: #125688;
+    color: white;
 }
 
 
@@ -1052,7 +1052,7 @@ ul {
     background-color: green;
     font-family: verdana;
     color:white;
-    
+
 }
 .cadastro-not{
     width: 100%;
@@ -1060,7 +1060,7 @@ ul {
     background-color: red;
     font-family: verdana;
     color:white;
-    
+
 }
 
 .img-exibir{

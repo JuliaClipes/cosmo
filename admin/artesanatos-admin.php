@@ -1,6 +1,7 @@
  <?php
     include_once 'nav-admin.php';
     include_once '../classes/ArtesanatoBanco.php';
+   // include_once '../login/Verifica.php';
 
     $artesanatoBanco = new ArtesanatoBanco();
     $lista_artesanato = $artesanatoBanco->select();

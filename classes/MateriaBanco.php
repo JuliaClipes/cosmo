@@ -43,7 +43,27 @@ class MateriaBanco extends ConexaoBanco {
     }
 
     public function select() {
-        $stmt = $this->conexao->prepare("SELECT * FROM $this->tabela_materia");
+        $stmt = $this->conexao->prepare("SELECT * FROM $this->tabela_materia ");
+        $stmt->execute();
+
+        $materia_novos = array();
+
+        while ($linha = $stmt->fetch()) {
+            $materia_novo = new Materia();
+            $materia_novo->setIdMateria($linha['id_materia_banco']);
+            $materia_novo->setImgMateria($linha['img_materia_banco']);
+            $materia_novo->setTextoMateria($linha['texto_materia_banco']);
+            $materia_novo->setTituloMateria($linha['titulo_materia_banco']);
+
+
+
+
+            $materia_novos[] = $materia_novo;
+        }
+        return $materia_novos;
+    }
+    public function select3() {
+        $stmt = $this->conexao->prepare("SELECT * FROM $this->tabela_materia ORDER BY id_materia_banco desc LIMIT 3 ");
         $stmt->execute();
 
         $materia_novos = array();

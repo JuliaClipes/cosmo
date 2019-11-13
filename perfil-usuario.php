@@ -1,7 +1,7 @@
 <html>
     <?php
     include_once 'nav-logado.php';
-    include_once 'login/Verifica.php';
+    //include_once 'login/Verifica.php';
     include_once 'classes/Usuario.php';
     include_once 'classes/UsuarioBanco.php';
 

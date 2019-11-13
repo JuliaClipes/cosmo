@@ -1,4 +1,5 @@
-<?php include_once 'nav-admin-c.php'; ?>
+<?php include_once 'nav-admin-c.php'; 
+//include_once '../login/Verifica.php';?>
 
 <div class="direita">
     <section class="form">

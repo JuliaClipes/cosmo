@@ -4,7 +4,7 @@
     include_once 'classes/MateriaBanco.php';
 
     $materiaBanco = new MateriaBanco();
-    $lista_materia = $materiaBanco->select();
+    $lista_materia = $materiaBanco->select3();
     ?>
     <div id="id02" class="modal">
 
@@ -43,6 +43,7 @@
     <section class="section">
         <div class="conteudo">
             <h1> Matérias Recentes </h1>
+           
             <?php foreach ($lista_materia as $materia): ?>
                 <div class="row">
                     <div class="materia-item">
@@ -52,6 +53,7 @@
 
                     </div>
                 <?php endforeach; ?> 
+               
             </div>
 
     </section>

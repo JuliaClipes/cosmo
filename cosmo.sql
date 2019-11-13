@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 25-Out-2019 às 23:49
--- Versão do servidor: 10.4.6-MariaDB
--- versão do PHP: 7.3.9
+-- Tempo de geração: 13-Nov-2019 às 03:03
+-- Versão do servidor: 10.4.8-MariaDB
+-- versão do PHP: 7.1.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -35,6 +35,13 @@ CREATE TABLE `administrador` (
   `email_admin_banco` varchar(80) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Extraindo dados da tabela `administrador`
+--
+
+INSERT INTO `administrador` (`id_admin_banco`, `nome_admin_banco`, `senha_admin_banco`, `email_admin_banco`) VALUES
+(1, 'Julia', '827ccb0eea8a706c4c34a16891f84e7b', 'eu@julia.com');
+
 -- --------------------------------------------------------
 
 --
@@ -48,6 +55,13 @@ CREATE TABLE `artesanato` (
   `img_artesanato_banco` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Extraindo dados da tabela `artesanato`
+--
+
+INSERT INTO `artesanato` (`id_artesanato_banco`, `titulo_artesanato_banco`, `texto_artesanato_banco`, `img_artesanato_banco`) VALUES
+(4, 'Primeiro Artesanato', 'Texto legal', 'Artist’s_impression_of_the_deep_blue_planet_HD_189733b.jpg');
+
 -- --------------------------------------------------------
 
 --
@@ -56,10 +70,17 @@ CREATE TABLE `artesanato` (
 
 CREATE TABLE `materia` (
   `id_materia_banco` int(11) NOT NULL,
-  `titulo_materia_banco` varchar(100) NOT NULL,
-  `texto_materia_banco` text NOT NULL,
+  `titulo_materia_banco` varchar(1000) NOT NULL,
+  `texto_materia_banco` mediumtext NOT NULL,
   `img_materia_banco` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `materia`
+--
+
+INSERT INTO `materia` (`id_materia_banco`, `titulo_materia_banco`, `texto_materia_banco`, `img_materia_banco`) VALUES
+(14, 'Primeira matéria', 'Texto legal', 'Artist’s_impression_of_the_deep_blue_planet_HD_189733b.jpg');
 
 -- --------------------------------------------------------
 
@@ -79,22 +100,8 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`id_usuario_banco`, `nome_usuario_banco`, `senha_usuario_banco`, `email_usuario_banco`) VALUES
-(1, 'qweeqwe', 'qweqweqwe', 'qweqweqwe'),
-(2, 'Lucelia', '12345', 'luh.vieiraa@gmail.com'),
-(3, 'Lucelia', '123456', 'luh.vieiraa@gmail.com'),
-(4, 'Lucelia', '123456', 'luh.vieiraa@gmail.com'),
-(5, 'Jorge', '321654', 'jorge_lindao@gmail.com'),
-(6, 'Jorge', '321654', 'jorge_lindao@gmail.com'),
-(7, 'JoÃ£o', '54789', 'joao_lindo@gmail.com'),
-(8, 'JoÃ£o', '54789', 'joao_lindo@gmail.com'),
-(9, 'Maria', '1234656', 'maria_bonita@gmail.com'),
-(10, 'Maria', '1234656', 'maria_bonita@gmail.com'),
-(11, 'LampiÃ£o', '123456', 'lampiao_lindo@gmail.com'),
-(12, 'LampiÃ£o', '123456', 'lampiao_lindo@gmail.com'),
-(13, 'Vinicius', '123456987', 'vinicius_lindao@gmail.com'),
-(14, 'Vinicius', '123456987', 'vinicius_lindao@gmail.com'),
-(15, 'Gabriela', '123456789', 'gabriela_linda@gmail.com'),
-(16, 'neida', '321654', 'neida_lindinha@gmail.com');
+(18, 'Julia', '827ccb0eea8a706c4c34a16891f84e7b', 'julia@usuaria.com'),
+(19, 'Teste', '827ccb0eea8a706c4c34a16891f84e7b', 'teste@gmail.com');
 
 --
 -- Índices para tabelas despejadas
@@ -132,25 +139,25 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de tabela `administrador`
 --
 ALTER TABLE `administrador`
-  MODIFY `id_admin_banco` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_admin_banco` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de tabela `artesanato`
 --
 ALTER TABLE `artesanato`
-  MODIFY `id_artesanato_banco` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_artesanato_banco` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de tabela `materia`
 --
 ALTER TABLE `materia`
-  MODIFY `id_materia_banco` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_materia_banco` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de tabela `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id_usuario_banco` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id_usuario_banco` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
