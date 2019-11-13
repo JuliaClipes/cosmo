@@ -7,7 +7,7 @@ $lista_materia = $materiaBanco->select();
 ?>
 <div class="direita">
     <section class="form">
-        <form action="" method="GET" class="tableAdmin ">
+        <form action="" method="POST" class="tableAdmin ">
             <div class="tableHeader row">
                 <h2 class="title">Lista de Matérias</h2>
                 <div class="btnArea">
@@ -33,8 +33,8 @@ $lista_materia = $materiaBanco->select();
                             <div class="cell cell-100"><img src="assets/img-temporaria/<?php echo $materia->getImgMateria(); ?>" class="img-lista"></div>
 
                             <div class="cell cell-100 text-center">
-                                <a onclick="window.location = 'materia-editar.php?id=<?php echo $materia->getIdMateria(); ?>';"class="text editar-botao"> <i class="far fas fa-edit icone-acoes-admin"/></i></a>
-                                <a href=""  onclick="confirm('Deseja exclir este registro?') ? window.location = '../classes/deleta-materia-c.php?id=<?php echo $produto->getId(); ?>' : stop = false;" > <i class="far fas fa-trash icone-acoes-admin"/></i></a>
+                                <a onclick="window.location = 'materia-editar.php?id=<?php echo $materia->getIdMateria(); ?>';" class="text editar-botao"> <i class="far fas fa-edit icone-acoes-admin"/></i></a>
+                                <a onclick="confirm('Deseja excluir este registro?') ? window.location = '../classes/deleta-materia-c.php?id=<?php echo $materia->getIdMateria(); ?>' : stop = false;" > <i class="far fas fa-trash icone-acoes-admin"/></i></a>
                             </div>
 
                         </li>

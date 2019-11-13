@@ -37,7 +37,7 @@ class MateriaBanco extends ConexaoBanco {
         $stmt = $this->conexao->prepare("DELETE FROM {$this->tabela_materia} "
                 . " WHERE id_materia_banco = :id_materia");
 
-        $stmt->bindValue(':id_materia', $materia_novo->getId());
+        $stmt->bindValue(':id_materia', $materia_novo->getIdMateria());
 
         return $stmt->execute();
     }

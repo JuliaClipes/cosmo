@@ -1,6 +1,6 @@
  <?php
-    include_once 'nav-admin.php';
-    include_once '../classes/MateriaBanco.php';
+    include_once 'nav-admin-c.php';
+    include_once '../../classes/MateriaBanco.php';
 
     $materiaBanco = new MateriaBanco();
     $lista_materia = $materiaBanco->select();
@@ -11,12 +11,14 @@
                 <div class="tableHeader row">
                     <h2 class="title">Lista de Matérias</h2>
                     <div class="btnArea">
-                        <button class="btnAdicionar bg-1 text-fff"><a href="materia-cadastro.php" class="a-button">Nova Matéria</a></button> 
+                        <button class="btnAdicionar bg-1 text-fff"><a href="../materia-cadastro.php" class="a-button">Nova Matéria</a></button> 
                     </div>
-                     <div class="cadastro-not"> Não foi possível deletar essa matéria :( </div>
+                     
                 </div>
+                <div class="cadastro-not"> Não foi possível deletar essa matéria :( </div>
                 <div class="tableBody">
                     <div class="row bg-1">
+                        
                         <div class="cell2 cell-50 text-center text-fff">ID</div>
                         <div class="cell2 cell-100 text-center text-fff">Título</div> 
                         <div class="cell2 cell-100p text-center text-fff">Texto</div>

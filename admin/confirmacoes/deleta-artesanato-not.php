@@ -1,6 +1,6 @@
  <?php
     include_once 'nav-admin.php';
-    include_once '../classes/ArtesanatoBanco.php';
+    include_once '../.../classes/ArtesanatoBanco.php';
 
     $artesanatoBanco = new ArtesanatoBanco();
     $lista_artesanato = $artesanatoBanco->select();
@@ -11,10 +11,11 @@
                 <div class="tableHeader row">
                     <h2 class="title">Lista de Artesanatos</h2>
                     <div class="btnArea">
-                        <button class="btnAdicionar bg-1 text-fff"><a href="artesanato-cadastro.php" class="a-button">Nova Matéria</a></button> 
+                        <button class="btnAdicionar bg-1 text-fff"><a href="../artesanato-cadastro.php" class="a-button">Nova Matéria</a></button> 
                     </div>
-                     <div class="cadastro-not"> Não foi possível deletar essa matéria :( </div>
+                    
                 </div>
+                 <div class="cadastro-not"> Não foi possível deletar essa matéria :( </div>
                 <div class="tableBody">
                     <div class="row bg-1">
                         <div class="cell2 cell-50 text-center text-fff">ID</div>

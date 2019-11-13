@@ -211,6 +211,7 @@ h3{
     color: #452e5b;
     text-align: justify;
     font-size:16px;
+    word-wrap: break-word;
 }
 
 

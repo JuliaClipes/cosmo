@@ -33,7 +33,7 @@ class ArtesanatoBanco extends ConexaoBanco {
         $stmt = $this->conexao->prepare("DELETE FROM {$this->tabela_artesanato} "
                 . " WHERE id_artesanato_banco = :id_artesanato");
 
-        $stmt->bindValue(':id_artesanato', $artesanato_novo->getId());
+        $stmt->bindValue(':id_artesanato', $artesanato_novo->getIdArtesanato());
 
         return $stmt->execute();
     }

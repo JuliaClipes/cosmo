@@ -33,8 +33,8 @@
                             <div class="cell cell-100"><img src="assets/img-temporaria/<?php echo $artesanato->getImgArtesanato(); ?>" class="img-lista"></div>
 
                             <div class="cell cell-100 text-center">
-                                <a href="artesanatos-edit.php" class="text editar-botao"> <i class="far fas fa-edit icone-acoes-admin"/></i></a>
-                                <a href=""  onclick='return confirm("Tem certeza que quer remover este item?")'> <i class="far fas fa-trash icone-acoes-admin"/></i></a>
+                                <a onclick="window.location = 'artesanato-editar.php?id=<?php echo $artesanato->getIdArtesanato(); ?>';" class="text editar-botao"> <i class="far fas fa-edit icone-acoes-admin"/></i></a>
+                                <a onclick="confirm('Deseja exclir este registro?') ? window.location = '../classes/deleta-artesanato-c.php?id=<?php echo $artesanato->getIdArtesanato(); ?>' : stop = false;" > <i class="far fas fa-trash icone-acoes-admin"/></i></a>
                             </div>
 
                         </li>
@@ -48,5 +48,3 @@
         </section>
     </div>
 
-</body>
-</html>
