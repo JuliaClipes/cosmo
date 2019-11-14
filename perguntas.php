@@ -6,5 +6,6 @@
 //editar abre todas coisas juntas
 //Erros no perfil do Login = array de array
 //Verifica.php não funciona
+//login não funciona, DE NOVO
 
 

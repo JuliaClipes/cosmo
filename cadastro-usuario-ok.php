@@ -28,31 +28,55 @@
                         <p class="label">Senha:</p>
                         <input type="password" name="senha-cadastro-usuario" class="input">
                     </div>
-                    <div class="tableHeader row">
-                        <div class="btnArea">
-                            <a href="index.php">  <button class="btnCancelar bg-1 text-fff">Cancelar </button> </a>
-                            <button class="btnSalvar bg-1 text-fff" onclick='return confirm("Cadastrado com sucesso!")' >Cadastrar</button>
+                 <div class="formGroup row">
+                            <div class="g-recaptcha" data-sitekey="6LdCxMIUAAAAALQY61bDGdpPMJMjrWEp-ZA3O28p" id="g-recaptcha-response"></div>
+                        </div>
+
+                        <div class="tableHeader row">
+                            <div class="btnArea">
+                                <a href="index.php">  <button class="btnCancelar bg-1 text-fff">Cancelar </button> </a>
+                                <button class="btnSalvar bg-1 text-fff"  >Cadastrar</button>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </form>
+                </form>
 
+            </div>
+        </section>
+
+        <div class="div-botao-topo">
+
+            <button onclick="topFunction()" id="botao-topo">Topo</button>
         </div>
-    </section>
 
-    <div class="div-botao-topo">
-
-        <button onclick="topFunction()" id="botao-topo">Topo</button>
-    </div>
-
-    <div class="assinatura">
-        <p> JuliaClipes 2019 </p>
-    </div>
-
-</body>
-<script type="text/javascript" src="assets/js/estilo.js"></script>
-<script src="assets/js/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <div class="assinatura">
+            <p> JuliaClipes 2019 </p>
+        </div>
 
 
-</html>
+
+
+        <script>
+            <script type="text/jav                          ascript">
+                var onloadCallback =                               func tion
+                        () {                     a                                  lert ("gr
+                        ecaptcha is ready!                                        ");
+                        };
+ 
+                </script>
+                    <script          >
+         
+                            window.onload = function()           {
+                        var recaptcha = document.forms["cadastro"]["g-recaptcha-response"];
+                recaptcha.required = true;
+                recaptcha.oninvalid = function(e)           {
+                // fazer algo, no caso to dando um aler        
+                        t
+                alert("Por favor complete o reCaptcha");
+               }
+                            }
+                            </script>
+        </script        >
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
 

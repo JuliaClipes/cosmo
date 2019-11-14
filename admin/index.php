@@ -1,6 +1,6 @@
 <html>
 <?php include_once 'nav-admin.php';
-include_once '../login/Verifica.php';?>
+//include_once '../login/Verifica.php';?>
 
 <body>
     <div class="direita-index">

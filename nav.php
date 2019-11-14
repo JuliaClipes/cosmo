@@ -8,6 +8,7 @@
         <link rel="stylesheet" type="text/css" href="assets/css/icons.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="assets/css/estilo.css">
+        
         <link rel='icon' type="image/png" sizes="32x32" href="assets/img/logo-roxo.png">
     </head>
 
@@ -86,5 +87,3 @@ if (isset($_POST['email-usuario']) && $_POST['email-usuario'] != ""
     $usuario->setSenhaUsuario($_POST['senha-usuario']);
         }
     ?>
-
-</html> 
