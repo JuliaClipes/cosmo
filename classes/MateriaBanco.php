@@ -19,7 +19,7 @@ class MateriaBanco extends ConexaoBanco {
     }
 
     public function update($materia_novo) {
-        
+
         var_dump($materia_novo);
         $stmt = $this->conexao->prepare("UPDATE $this->tabela_materia SET img_materia_banco = :img_materia, texto_materia_banco = :texto_materia, titulo_materia_banco=:titulo_materia  WHERE id_materia_banco = :id_materia;");
 
@@ -62,6 +62,7 @@ class MateriaBanco extends ConexaoBanco {
         }
         return $materia_novos;
     }
+
     public function select3() {
         $stmt = $this->conexao->prepare("SELECT * FROM $this->tabela_materia ORDER BY id_materia_banco desc LIMIT 3 ");
         $stmt->execute();
@@ -84,20 +85,20 @@ class MateriaBanco extends ConexaoBanco {
     }
 
     public function selectById($materia_novo) {
-        $stmt = $this->conexao->prepare("SELECT * FROM $this->tabela_materia WHERE id_materia_banco = $materia_novo");
+        $stmt = $this->conexao->prepare("SELECT * FROM $this->tabela_materia WHERE id_materia_banco = :id_materia_lista");
+
+        $stmt->bindValue(':id_materia_lista', $materia_novo->getIdMateria());
         $stmt->execute();
-        $linha = $stmt->fetchAll();
-        
+       
+        $linha = $stmt->fetch();
+
+        $materia_novo1 = new Materia();
+        $materia_novo1->setImg($linha['img_materia_banco']);
+        $materia_novo1->setId($linha['id_materia_banco']);
+        $materia_novo1->setTexto($linha['texto_materia_banco']);
+        $materia_novo1->setTitulo($linha['titulo_materia_banco']);
+
         return $linha;
-        
-        //$materia_edita = new Materia();
-        //$materia_edita->setImg($linha['img_materia_banco']);
-        //$materia_edita->setId($linha['id_materia_banco']);
-        //$materia_edita->setTexto($linha['texto_materia_banco']);
-        //$materia_edita->setTitulo($linha['titulo_materia_banco']);
-
-
-        
     }
 
 }

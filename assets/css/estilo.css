@@ -142,7 +142,6 @@ body{
     height: auto;
     margin-left: 80px;
     margin-right: 90px;
-    justify-content: center;
     font-family: verdana;
     font-size: 15px;
 
@@ -1065,4 +1064,15 @@ ul {
 
 .img-exibir{
     width: 300px;
+}
+
+.per-materia{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.row-materia{
+    width: 100%;
 }

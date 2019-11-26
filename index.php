@@ -26,8 +26,8 @@
     <section class="section-icones">
         <div class="conteudo">
             <div class="div-icones">
-                <a href="materias.html"> <i class="far fas fa-newspaper icone"/></i></a>
-                <a href="artesanato.html"> <i class="far fas fa-hand-holding-heart icone"></i> </a>
+                <a href="materias.php"> <i class="far fas fa-newspaper icone"/></i></a>
+                <a href="artesanatso.php"> <i class="far fas fa-hand-holding-heart icone"></i> </a>
                 <a onClick="document.getElementById('id01').style.display = 'block'" style="width:auto;"> <i class="far fas fa-user icone"></i> </a>
             </div>
             <div class="div-icones">
@@ -49,7 +49,7 @@
                     <div class="materia-item">
                         <h3> <?php echo $materia->getTituloMateria(); ?> </h3>
                         <img src="admin/assets/img-temporaria/<?php echo $materia->getImgMateria(); ?>" class="img-exibir">
-                        <p class="p-t"> <span>&nbsp;&nbsp;</span><?php echo $materia->getTextoMateria(); ?> <a class="c-continuar-lendo" href="materia.html"> Continuar lendo </a> </p> 
+                        <p class="p-t"> <span>&nbsp;&nbsp;</span><?php echo $materia->getTextoMateria(); ?> <a class="c-continuar-lendo" href="materia.php"> Continuar lendo </a> </p> 
 
                     </div>
                 <?php endforeach; ?> 
