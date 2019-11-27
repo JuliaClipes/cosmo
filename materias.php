@@ -3,7 +3,7 @@
     include_once 'nav.php';
 
     include_once 'classes/MateriaBanco.php';
-
+    session_start();
     $materiaBanco = new MateriaBanco();
     $lista_materia = $materiaBanco->select();
     ?>
@@ -12,19 +12,19 @@
         <section class="section">
             <div class="conteudo per-materia">
                 <h1 class="h1-m"> Matérias</h1>
-                <div class="row row-materia">
-                    <div class="a">
-                        <?php foreach ($lista_materia as $materia): ?>
+                <div class="row">
+                    <?php foreach ($lista_materia as $materia): ?>
 
-                            <div class="materia-item-m">
-                                <h3> <?php echo $materia->getTituloMateria(); ?> </h3>
-                                <p class="p-t"> <span>&nbsp;&nbsp;</span><?php echo $materia->getTextoMateria(); ?> <a class="c-continuar-lendo" href="materia.php"> Continuar lendo </a></p> 
-                                <button class="botao-favoritar" value="<?php echo $materia->getIdMateria(); ?>"> Favoritar <i class="far fas fa-star icone-editar-user"/></i> </button>
-                            </div> 
-                        <?php endforeach; ?>
-                    </div>
+                        <div class="materia-item-m">
+                            <h3> <?php echo $materia->getTituloMateria(); ?> </h3>
+                            <p class="p-t"> <span>&nbsp;&nbsp;</span><?php echo substr($materia->getTextoMateria(), 0, 300) . "..."; ?> <a class="c-continuar-lendo" href="materia.php"> Continuar lendo </a></p> 
+                            <button class="botao-favoritar" value="<?php echo $_SESSION['id_materia_usuario'] = $materia->getIdMateria(); ?>"> Favoritar <i class="far fas fa-star icone-editar-user"/></i> </button>
+                        </div> 
+                    <?php endforeach; ?>
                 </div>
             </div>
+
+
 
 
 

@@ -23,7 +23,10 @@ $verifica = mysqli_query($conexao, $sql);
 
 
 if ($verifica->num_rows > 0) {
-    $_SESSION['id_user'] = $row['id_usuario_banco'];
+
+    $a = mysqli_fetch_assoc($verifica);
+    //var_dump($a);die;
+    $_SESSION['id_user'] = $a['id_usuario_banco'];
     $_SESSION['tipo'] = 'usuario';
     header('location:../perfil-usuario.php');
 } else {
@@ -34,10 +37,13 @@ if ($verifica->num_rows > 0) {
    
 
     if ($verifica->num_rows <= 0) {
-        //header('location:../index.php');
+        header('location:../index.php');
     } else {
+
+        $a = mysqli_fetch_assoc($verifica);
+        //var_dump($a);die;
         $_SESSION['tipo'] = 'adm';
-        $_SESSION['id_admin'] = $row['id_admin_banco'];
+        $_SESSION['id_admin'] = $a['id_admin_banco'];
         header('location:../admin/perfil-admin.php');
     }
 }

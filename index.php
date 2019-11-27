@@ -2,7 +2,6 @@
     <?php
     include_once 'nav.php';
     include_once 'classes/MateriaBanco.php';
-
     $materiaBanco = new MateriaBanco();
     $lista_materia = $materiaBanco->select3();
     ?>
@@ -45,11 +44,11 @@
             <h1> Matérias Recentes </h1>
            
             <?php foreach ($lista_materia as $materia): ?>
-                <div class="row">
+                <div class="row-index">
                     <div class="materia-item">
                         <h3> <?php echo $materia->getTituloMateria(); ?> </h3>
                         <img src="admin/assets/img-temporaria/<?php echo $materia->getImgMateria(); ?>" class="img-exibir">
-                        <p class="p-t"> <span>&nbsp;&nbsp;</span><?php echo $materia->getTextoMateria(); ?> <a class="c-continuar-lendo" href="materia.php"> Continuar lendo </a> </p> 
+                        <p class="p-t"> <span>&nbsp;&nbsp;</span><?php echo substr($materia->getTextoMateria(),0,70); ?> <a class="c-continuar-lendo" href="materia.php"> Continuar lendo </a> </p> 
 
                     </div>
                 <?php endforeach; ?> 
@@ -93,5 +92,3 @@
 
     <script type="text/javascript" src="assets/js/estilo.js"></script>
     <script type="text/javascript" src="assets/js/jquery-1.11.3.min.js"></script>
-
-

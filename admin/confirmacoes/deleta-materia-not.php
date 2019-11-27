@@ -33,7 +33,7 @@
                         <li class="row">
                             <div class="cell cell-50" name="id_materia_lista"> <?php echo $materia->getIdMateria(); ?></div>
                             <div class="cell cell-100 text-center"><?php echo $materia->getTituloMateria(); ?></div>
-                            <div class="cell cell-100p text-center"><?php echo $materia->getTextoMateria(); ?></div>
+                            <div class="cell cell-100p text-center"><?php echo substr($materia->getTextoMateria(),0,50)."..."; ?></div>
                             <div class="cell cell-100"><img src="assets/img-temporaria/<?php echo $materia->getImgMateria(); ?>" class="img-lista"></div>
 
                             <div class="cell cell-100 text-center">

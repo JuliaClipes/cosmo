@@ -2,8 +2,7 @@
 include_once 'nav-admin.php';
 include_once '../classes/MateriaBanco.php';
 //include_once '../login/Verifica.php';
-
-
+session_start();
 $materiaBanco = new MateriaBanco();
 $lista_materia = $materiaBanco->select();
 ?>
@@ -29,9 +28,9 @@ $lista_materia = $materiaBanco->select();
                 <?php foreach ($lista_materia as $materia): ?>
                     <ul class="list lv01">
                         <li class="row">
-                            <div class="cell cell-50" name="id_materia_lista"> <?php echo $materia->getIdMateria(); ?></div>
+                            <div class="cell cell-50"> <?php echo  $_SESSION['id_materia_edita']=$materia->getIdMateria(); ?></div>
                             <div class="cell cell-100 text-center"><?php echo $materia->getTituloMateria(); ?></div>
-                            <div class="cell cell-100p text-center"><?php echo $materia->getTextoMateria(); ?></div>
+                            <div class="cell cell-100p text-center"><?php echo substr($materia->getTextoMateria(), 0, 50) . "..."; ?></div>
                             <div class="cell cell-100"><img src="assets/img-temporaria/<?php echo $materia->getImgMateria(); ?>" class="img-lista"></div>
 
                             <div class="cell cell-100 text-center">
@@ -45,8 +44,7 @@ $lista_materia = $materiaBanco->select();
             </div>
         </form>
 
-
+     
 
     </section>
 </div>
-

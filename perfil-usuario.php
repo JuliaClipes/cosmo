@@ -6,29 +6,27 @@
     include_once 'classes/UsuarioBanco.php';
 
     session_start();
+
     $id_usuario_login = $_SESSION['id_user'];
 
     $usuario = new UsuarioBanco();
     $nome = $usuario->selectById($id_usuario_login);
 
-    //var_dump($nome);
-
-    $novo_array = array();
-    array_walk_recursive($nome, function ($item, $key) {
-        global $novo_array;
-        $novo_array[] = $item;
-    });
+    foreach($nome as $b){
+        //var_dump($b);die;
+    
     ?>
     <body>
         <section class="section">
             <div class="conteudo">
                 <div> <h1 class="h1-perfil"> Perfil </h1></div>
                 <div class="esquerda">
-                    <h1 class="h1-user"> Olá, <?php echo $novo_array[3]; ?> </h1>
+                    <h1 class="h1-user"> Olá, <?php echo $b['nome_usuario_banco']; ?> </h1>
                     <img class="img-user-perfil" src="assets/img/user-perfil.png">
                     <div class="box-perfil-user">
-                        <p class="p-user"> <?php echo $novo_array[3]; ?> <a href="perfil-usuario-edit.php" class="button-edit-user" href="perfil-usuario-edit.php"><i class="far fas fa-edit icone-editar-user"/></i></a> </p>
-                        <p class="p-user"> <?php echo $novo_array[6]; ?><a href="perfil-usuario-edit.php" class="button-edit-user"><i class="far fas fa-edit icone-editar-user"/></i></a> </p>
+                        <p class="p-user"> <?php echo $b['email_usuario_banco']; ?> <a href="perfil-usuario-edit.php" class="button-edit-user" href="perfil-usuario-edit.php"><i class="far fas fa-edit icone-editar-user"/></i></a> </p>
+                        <p class="p-user"> ********** <a href="perfil-usuario-edit.php" class="button-edit-user"><i class="far fas fa-edit icone-editar-user"/></i></a> </p>
+                        <?php } ?>
                         <a href="index.php" class="button-sair-user"> <i class="far fas fa-power-off button-sair-user"></i>Sair</a>
                     </div>
                 </div>
@@ -151,6 +149,7 @@
                             </td>
                         </tr>
                     </table>
+
 
                 </div>
 

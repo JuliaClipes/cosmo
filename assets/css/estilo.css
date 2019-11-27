@@ -142,6 +142,7 @@ body{
     height: auto;
     margin-left: 80px;
     margin-right: 90px;
+    justify-content: center;
     font-family: verdana;
     font-size: 15px;
 
@@ -150,6 +151,20 @@ body{
 .row{
     display:flex;
     justify-content:center;
+    word-wrap:break-word;
+    width: 100%;
+
+}
+.row-index{
+    display:flex;
+  
+
+}
+.materia-item{
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 300px;
+    
 }
 
 .texto {
@@ -209,6 +224,8 @@ h3{
     color: #452e5b;
     text-align: justify;
     font-size:16px;
+    word-wrap:  break-word;
+
 
 }
 
@@ -352,16 +369,11 @@ hr {
 
 }
 
-.materia-item{
-    padding-left: 5%;
-    padding-right: 6%;
-    width: 300px;
-    
-}
+
 .materia-item-m{
     padding-left: 2%;
     padding-right: 2%;
-    width: 400px;
+    width: 300px;
     padding-top: 10px;
     padding-bottom: 50px;
 }
@@ -573,6 +585,11 @@ img.avatar {
 .conteudo-login {
     padding: 15px;
     background-color:#c8bdfc;
+}
+
+.resolvendo_coisas{
+    display: flex;
+    flex-direction: column;
 }
 
 .p-cadastrar{
@@ -1074,5 +1091,10 @@ ul {
 }
 
 .row-materia{
-    width: 100%;
+word-wrap: break-word;
+
+}
+
+.a{
+    -webkit-columns: 100px 3;
 }

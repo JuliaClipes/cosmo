@@ -85,19 +85,11 @@ class MateriaBanco extends ConexaoBanco {
     }
 
     public function selectById($materia_novo) {
-        $stmt = $this->conexao->prepare("SELECT * FROM $this->tabela_materia WHERE id_materia_banco = :id_materia_lista");
-
-        $stmt->bindValue(':id_materia_lista', $materia_novo->getIdMateria());
+       $stmt = $this->conexao->prepare("SELECT * FROM $this->tabela_materia WHERE id_usuario_banco = $materia_novo");
+        
         $stmt->execute();
-       
-        $linha = $stmt->fetch();
-
-        $materia_novo1 = new Materia();
-        $materia_novo1->setImg($linha['img_materia_banco']);
-        $materia_novo1->setId($linha['id_materia_banco']);
-        $materia_novo1->setTexto($linha['texto_materia_banco']);
-        $materia_novo1->setTitulo($linha['titulo_materia_banco']);
-
+        $linha = $stmt->fetchAll();
+        
         return $linha;
     }
 

@@ -3,7 +3,7 @@
 
 <div class="direita">
     <section class="form">
-        <form action="../classes/cadastro-materia-c.php" method="POST" enctype="multipart/form-data" class="tableAdmin">
+        <form action="../../classes/cadastro-materia-c.php" method="POST" enctype="multipart/form-data" class="tableAdmin">
             <div class="tableHeader row">
                 <h2 class="title">Matérias - Adicionar</h2>
             </div>

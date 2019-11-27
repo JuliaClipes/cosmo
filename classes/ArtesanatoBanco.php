@@ -58,16 +58,12 @@ class ArtesanatoBanco extends ConexaoBanco {
     }
 
     public function selectById($artesanato_novo) {
-        $stmt = $this->conexao->prepare("SELECT * FROM $this->tabela_artesanato WHERE id_artesanato_banco = :id_artesanato");
-        $stmt->bindValue(':id_artesanato', $artesanato_novo->getIdArtesanato());
+          $stmt = $this->conexao->prepare("SELECT * FROM $this->tabela_artesanato WHERE id_usuario_banco = $artesanato_novo");
+        
         $stmt->execute();
-        $linha = $stmt->fetch();
-        $artesanato_novo = new Artesanato();
-        $artesanato_novo->setTitulo($linha['titulo_artesanato_banco']);
-        $artesanato_novo->setTexto($linha['texto_artesanato_banco']);
-        $artesanato_novo->setImg($linha['img_artesanato_banco']);
-        $artesanato_novo->setId($linha['id_artesanato_banco']);
-        return $artesanato_novo;
+        $linha = $stmt->fetchAll();
+        
+        return $linha;
     }
 
 }
