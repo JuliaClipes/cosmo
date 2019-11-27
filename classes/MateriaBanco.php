@@ -85,7 +85,7 @@ class MateriaBanco extends ConexaoBanco {
     }
 
     public function selectById($materia_novo) {
-       $stmt = $this->conexao->prepare("SELECT * FROM $this->tabela_materia WHERE id_usuario_banco = $materia_novo");
+       $stmt = $this->conexao->prepare("SELECT * FROM $this->tabela_materia WHERE id_materia_banco = $materia_novo");
         
         $stmt->execute();
         $linha = $stmt->fetchAll();

@@ -26,7 +26,7 @@
         <div class="conteudo">
             <div class="div-icones">
                 <a href="materias.php"> <i class="far fas fa-newspaper icone"/></i></a>
-                <a href="artesanatso.php"> <i class="far fas fa-hand-holding-heart icone"></i> </a>
+                <a href="artesanatos.php"> <i class="far fas fa-hand-holding-heart icone"></i> </a>
                 <a onClick="document.getElementById('id01').style.display = 'block'" style="width:auto;"> <i class="far fas fa-user icone"></i> </a>
             </div>
             <div class="div-icones">

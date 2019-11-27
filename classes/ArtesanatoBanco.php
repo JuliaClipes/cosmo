@@ -58,7 +58,7 @@ class ArtesanatoBanco extends ConexaoBanco {
     }
 
     public function selectById($artesanato_novo) {
-          $stmt = $this->conexao->prepare("SELECT * FROM $this->tabela_artesanato WHERE id_usuario_banco = $artesanato_novo");
+          $stmt = $this->conexao->prepare("SELECT * FROM $this->tabela_artesanato WHERE id_artesanato_banco = $artesanato_novo");
         
         $stmt->execute();
         $linha = $stmt->fetchAll();

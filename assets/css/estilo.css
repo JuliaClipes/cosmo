@@ -153,16 +153,17 @@ body{
     justify-content:center;
     word-wrap:break-word;
     width: 100%;
+    flex-wrap: wrap;
 
 }
 .row-index{
     display:flex;
+    margin-left:80px;
   
 
 }
 .materia-item{
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-right: 50px;
     width: 300px;
     
 }
@@ -533,8 +534,6 @@ hr {
 
 .materia-especifica{
     text-align:center;
-    padding-left:100px;
-    padding-right: 100px;
     padding-top:10px;
 }
 

@@ -7,6 +7,9 @@
     $id_materia = $_SESSION['id_materia_usuario'];
     $materiaBanco = new MateriaBanco();
     $lista_materia = $materiaBanco->selectById($id_materia);
+    
+    
+    
     ?>
     <body>
 
@@ -14,10 +17,10 @@
             <div class="conteudo">
                  <?php foreach ($lista_materia as $materia): ?>
                 <div class="materia-especifica">
-                    <h2><?php $materia->getTituloMateria(); ?></h2>
-                    <img src="assets/img/<?php $materia->getImgMateria(); ?>">
+                    <h2><?php echo $materia['titulo_materia_banco']; ?></h2>
+                    <img src="assets/img/<?php echo $materia['img_materia_banco']; ?>">
 
-                    <p class="p-t"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><?php $materia->getTextoMateria(); ?></p>
+                    <p class="p-t"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><?php echo $materia['texto_materia_banco']; ?></p>
                     
                     <button class="botao-favoritar"  onclick='return confirm("Item adicionado com sucesso! Confira no seu perfil.")'> Favoritar <i class="far fas fa-star icone-editar-user"/></i> </button>
 

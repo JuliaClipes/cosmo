@@ -30,7 +30,7 @@ $lista_artesanato = $artesanatoBanco->select();
                         <li class="row">
                             <div class="cell cell-50"> <?php echo  $_SESSION['id_artesanato_edita']=$artesanato->getIdArtesanato(); ?></div>
                             <div class="cell cell-100 text-center"><?php echo $artesanato->getTituloArtesanato(); ?></div>
-                            <div class="cell cell-100p text-center"><?php echo $artesanato->getTextoArtesanato(); ?></div>
+                            <div class="cell cell-100p text-center"><?php echo substr($artesanato->getTextoArtesanato(),0,70)."..."; ?></div>
                             <div class="cell cell-100"><img src="assets/img-temporaria/<?php echo $artesanato->getImgArtesanato(); ?>" class="img-lista"></div>
 
                             <div class="cell cell-100 text-center">

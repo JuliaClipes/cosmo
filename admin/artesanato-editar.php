@@ -19,19 +19,19 @@ $lista_artesanato = $artesanatoBanco->selectById($id_artesanato);
             <div class="tableBody v02">
                 <?php foreach ($lista_artesanato as $artesanato): ?>
                     <div class="formGroup row">
-                        <input type="hidden" name="id-edita-artesanato" class="input" value="<?php echo $artesanato->getIdArtesanato(); ?>">
+                        <input type="hidden" name="id-edita-artesanato" class="input" value="<?php echo $artesanato['id_artesanato_banco'] ?>">
                         <p class="label">Título:</p>
-                        <input type="text" name="titulo-edita-artesanato" class="input" value="<?php echo $artesanato->getTituloArtesanato(); ?>">
+                        <input type="text" name="titulo-edita-artesanato" class="input" value="<?php echo $artesanato['titulo_artesanato_banco']; ?>">
                     </div>
                     <div class="formGroup row">
                         <p class="label">Texto: </p>
-                        <textarea name="texto-edita-artesanato" class="input"><?php echo $artesanato->getTextoArtesanato(); ?></textarea>
+                        <textarea name="texto-edita-artesanato" class="input"><?php echo $artesanato['texto_artesanato_banco']; ?></textarea>
                     </div>
 
                     <div class="formGroup row">
                         <p class="label">Imagem Atual:</p>
-                        <img src="assets/img-temporaria/<?php echo $artesanato->getImgArtesanato(); ?>" name="img-edita-artesanato-antiga" value="<?php echo $artesanato->getImgArtesanato(); ?>" class="img-lista">
-                        <input type="hidden" name="img-edita-artesanato-antiga" value="<?php echo $artesanato->getImgArtesanato(); ?>">
+                        <img src="assets/img-temporaria/<?php echo $artesanato['img_artesanatto_banco']; ?>" name="img-edita-artesanato-antiga" value="<?php echo  $artesanato['img_artesanatto_banco']; ?>" class="img-lista">
+                        <input type="hidden" name="img-edita-artesanato-antiga" value="<?php echo  $artesanato['img_artesanatto_banco']; ?>">
                     </div>
                     <p class="label">Nova Imagem:</p>
                     <div class="formGroup row">

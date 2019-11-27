@@ -5,9 +5,11 @@ include_once '../classes/Materia.php';
 //include_once '../login/Verifica.php';
 
 session_start();
+
 $id_materia = $_SESSION['id_materia_edita'];
 $materiaBanco = new MateriaBanco();
 $lista_materia = $materiaBanco->selectById($id_materia);
+
 ?>
 
 
@@ -33,8 +35,8 @@ $lista_materia = $materiaBanco->selectById($id_materia);
 
                     <div class="formGroup row">
                         <p class="label">Imagem Atual:</p>
-                        <img src="assets/img-temporaria/<?php echo $materia->getImgMateria(); ?>" name="img-edita-materia-antiga" value="<?php echo $materia->getImgMateria(); ?>" class="img-lista">
-                        <input type="hidden" name="img-edita-materia-antiga" value="<?php echo $materia->getImgMateria(); ?>">
+                        <img src="assets/img-temporaria/<?php echo $materia['img_materia_banco']; ?>" name="img-edita-materia-antiga" value="<?php echo $materia['img_materia_banco'] ?>" class="img-lista">
+                        <input type="hidden" name="img-edita-materia-antiga" value="<?php echo $materia['img_materia_banco']?>">
                     </div>
                     <p class="label">Nova Imagem:</p>
                     <div class="formGroup row">
